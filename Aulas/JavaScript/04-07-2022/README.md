@@ -1,3 +1,10 @@
+![codesize](https://img.shields.io/github/languages/code-size/badges/shields.svg)
+![languages](https://img.shields.io/github/languages/count/badges/shields.svg)
+![toplanguage](https://img.shields.io/github/languages/top/badges/shields.svg)
+
+[![linkedin](https://img.shields.io/badge/Linkedin-FFFFFF?style=flat&logo=linkedin&logoColor=blue)](https://www.linkedin.com/in/marcus-vinicius-de-miranda)
+[![linkedin](https://img.shields.io/badge/Instagram-FFFFFF?style=flat&logo=instagram&logoColor=orange)](https://www.instagram.com/marcusmiran/)
+
 ## Resumo Lista 3 de Exercício Javascript - 04-07-2022
 
 > ### 1 - Crie uma função que escreva uma mensagem informando se um número é par ou ímpar.
