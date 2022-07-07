@@ -14,7 +14,7 @@ Exemplo 2:
         O número 77 é ímpar  
 ```
 
-```
+```javascript
 let parImpar = (numero) => {
     console.log(`O número ${numero} é`, numero % 2 === 0 ? 'par' : 'impar');
 }
@@ -34,7 +34,7 @@ Exemplo 1:
         O número 2 é par // retorno do console.log que chama a função
 ```
 
-```
+```javascript
 let identificaParOuImpar = (numero) => {
     return numero % 2 === 0 ? 'par' : 'impar';
 }
@@ -59,7 +59,7 @@ Exemplo 1:
             [3, 1, 20, 99, 87, 45, 2, 10]
 ```
 
-```
+```javascript
 let inverterArray = (arr) => {
     let arr2 = [];
     // A função shift adiciona o elemento no início do array, enquando a função push adiciona no final.
@@ -81,7 +81,7 @@ Exemplo 1:
         3 + 4 = 7
 ```
 
-```
+```javascript
 let soma = (a, b) => {
     return a + b;
 }
@@ -100,7 +100,7 @@ Exemplo 1:
         Pão, Carne, ovo, bacon, Mussarela, Presunto, Alface, Tomate e Batata Palha
 ```
 
-```
+```javascript
 let mostraIngredientes = (ingredientes) => {
     let resultado = ingredientes.reduce((resultado, ingrediente, index, arr) => {
         // Perceba que o último item não é separado por vírgula, mas sim pela letra "e"
@@ -126,7 +126,7 @@ Exemplo 1:
         Pão, Carne, ovo, bacon, Mussarela, Presunto, Alface, Tomate, Batata Palha e Milho
 ```
 
-```
+```javascript
 let mostraIngredientes = (ingredientes) => {
     let resultado = ingredientes.reduce((resultado, ingrediente, index, arr) => {
         if (index != arr.length - 1) return resultado + ', ' + ingrediente;
@@ -159,7 +159,7 @@ Exemplo 1:
         }
 ```
 
-```
+```javascript
 let preencherNome = (nome, idade, endereco) => {
     return { nome: nome, idade: idade, endereco: endereco }
 };
@@ -173,7 +173,7 @@ preencherNome('Camila', 23, 'Rua dos andradas, 21');
   <img src='img/img-8.jpg' style='width: 70%'>
 </p>
 
-```
+```javascript
 let quantidades = (cesta) => {
     return cesta.reduce((resultado, produto, index, arr) => resultado + produto.quantidade, 0)
 }
@@ -207,7 +207,7 @@ console.log(quantidades(cesta));
 > ### 9 - Crie as funções acima utilizando array functions
 <br>
 
-```
+```javascript
 // já feito com array functions 
 ```
 <br>
@@ -217,7 +217,7 @@ console.log(quantidades(cesta));
 [ 0, 2, 98, 75, 23, 18, 31, 7, 1 ]
 ```
 
-```
+```javascript
 let dobro = (arr) => {
     return arr.map((x) => x * 2);
 }
@@ -233,7 +233,7 @@ dobro(numeros)
 [ "Abacaxi", "Uva", "Maçã", "Goiaba", "Abacate", "Acerola"]
 ```
 
-```
+```javascript
 let temO = (frutas) => {
 	// Utilizando toLowerCase() para considerar maiusculas também
     return frutas.filter((fruta) => fruta.toLowerCase().indexOf('o') > -1);
@@ -250,7 +250,7 @@ temO(frutas);
 [ "Abacaxi", "Uva", "Maçã", "Goiaba", "Abacate", "Acerola"]
 ```
 
-```
+```javascript
 let primeiraO = (frutas) => {
     return frutas.find((fruta) => fruta.toLowerCase().indexOf('o') > -1);
 }
@@ -266,7 +266,7 @@ primeiraO(frutas);
 [1, 2, 3, 4, 5, 6]
 ```
 
-```
+```javascript
 let soma = (numeros) => {
     return numeros.reduce((total, x) => total + x, 0);
 }
@@ -288,7 +288,7 @@ soma(numeros);
     ];
 ```
 
-```
+```javascript
 let idades = (arr) => {
     return arr.map((pessoa) => pessoa.age);
 }
@@ -307,7 +307,7 @@ idades(arr);
 <br>
 
 > ### 15 - Resolver as funções anteriores agora utilizando apenas array function
-```
+```javascript
 // já estão com array function 
 ```
 <br>
@@ -318,7 +318,7 @@ primeiroNome: { nome: 'João' }
 sobrenome: { sobrenome: 'da Silva' }
 ```
 
-```
+```javascript
 let unirNome = (nome, sobrenome) => Object.assign({}, primeiroNome, sobrenome);
 
 let primeiroNome = { nome: 'João' }, sobrenome = { sobrenome: 'da Silva' };
@@ -341,7 +341,7 @@ produto: {
 Alterar o valor do produto para 35.00 e o valor promocional deve ser o valor do produto com 10% de desconto.
 ```
 
-```
+```javascript
 let mudarValor = (produto, valor, desconto) => {
     return Object.assign({}, produto, {
         valor: valor,
@@ -368,7 +368,7 @@ produto = mudarValor(produto, 35.00, 10)
   <img src='img/img-17.jpg' style='width: 70%'>
 </p>
 
-```
+```javascript
 let filtroPreco = (cesta) => cesta.filter((produto) => produto.preco >= 50 && produto.preco < 60)
 
 let cesta = [
@@ -387,7 +387,7 @@ filtroPreco(cesta)
 <br>
 
 > ### 18 - Utilizando o objeto criado no exercício anterior, faça uma função que retorne a soma dos itens na lista de compras (utiliza o reduce)
-```
+```javascript
 let total = (cesta) => cesta.reduce(
     (resultado, produto) => resultado + produto.preco * produto.quantidade, 0)
 
@@ -407,7 +407,7 @@ total(cesta)
 <br>
 
 > ### 19 - Utilizando o objeto criado no exercício anterior, faça uma função que retorne o nome dos produtos que tenham o valor maior do que 25 reais.
-```
+```javascript
 let nomeProdutos = (cesta) => cesta.reduce((resultado, produto) => {
     if (produto.preco > 25) resultado.push(produto.descricao)
     return resultado
@@ -430,9 +430,13 @@ nomeProdutos(cesta)
 
 > ### Desafio: Busca por voo
 ```
-Vamos construir um conjunto de funções que vai salvar os dados de entrada sobre voos que estão para acontecer e depois podemos buscar algumas informações sobre os dados armazenados.
+Vamos construir um conjunto de funções que vai salvar os dados de entrada sobre voos que estão para acontecer e 
+depois podemos buscar algumas informações sobre os dados armazenados.
 
-Deve ser criada uma função que quando chamada seja passado os seguintes valores do voo como parâmetro: código, horário de partida, quantidade de passageiros, valor da passagem, origem e destino. Lembrete: qual a melhor estrutura para representar esses dados? Deve ser possível armazenar mais de um objeto. Sempre que a função for chamada, deve ser adicionado um item ao final,  com valores corretos.
+Deve ser criada uma função que quando chamada seja passado os seguintes valores do voo como parâmetro: código, 
+horário de partida, quantidade de passageiros, valor da passagem, origem e destino. Lembrete: qual a melhor 
+estrutura para representar esses dados? Deve ser possível armazenar mais de um objeto. Sempre que a função for 
+chamada, deve ser adicionado um item ao final,  com valores corretos.
 
 Exemplo:
     Entrada:
@@ -447,7 +451,7 @@ Exemplo:
         Entrada: buscarVooDestino("SP")
 ```
 
-```
+```javascript
 let voos = [];
 
 let cadastrarVoo = (codigo, partida, passageiros, valor, origem, destino) => {
@@ -478,4 +482,149 @@ cadastrarVoo(8, '24:14', 70, 1300, 'AC', 'RJ');
 
 buscaVooOrigem('RJ');
 buscaVooDestino('SP');
+```
+<br>
+
+> ### Desafio: Jogo da Velha:
+```
+Vamos construir um jogo da velha, mas para isso algumas funções devem ser criadas. Siga cada exercício dessa etapa, 
+para concluir o desafio
+
+Para cada jogada feita o programa deve ser capaz de escrever como está a visão do tabuleiro. Crie uma função que irá 
+"desenhar" o jogo da velha sempre que for chamada.
+
+Exemplo:
+
+    Entrada:
+        jogoVelha = [['', '', ''], ['', '', ''], ['', '', '']]
+        desenhaJogoVelha()
+    Saída:
+```
+
+<p align="center">
+  <img src='img/velha-1.jpg' style='width: 15%'>
+</p>
+
+```
+        Exemplo 2:
+    Entrada:
+        jogoVelha = [['X', '', 'O'], ['', '', ''], ['', 'X', 'O']]
+        desenhaJogoVelha()
+    Saída:
+```
+
+<p align="center">
+  <img src='img/velha-2.jpg' style='width: 15%'>
+</p>
+
+```
+● Faça uma função chamada jogar, que deve receber como parametro o número da linha (1 a 3), o número da coluna (1 a 3) 
+e qual vai ser a jogada no momento ("X" ou "O"). Toda vez que essa função for chamada, a matriz jogoDaVelha deve ser 
+preenchida corretamente, e o jogo da velha deve ser "desenhado" no console.
+
+● Faça uma função que retorne uma mensagem de erro com o texto "Jogada Inválida" sempre que a função jogar for chamada 
+descumprindo alguma das regras abaixo:
+
+    ○ Número da linha com valor diferente de 1, 2 ou 3
+    ○ Número da coluna com valor diferente de 1, 2 ou 3
+    ○ Valor da jogada diferente de "X" ou "O"
+    ○ Informar uma posição que não esteja vazia.
+
+● Faça funções que identifiquem ao final de uma jogada qual a situação do Jogo:
+
+    ○ "Jogo em Andamento!"
+    ○ "O Jogador X ganhou"
+    ○ "O Jogador O ganhou"
+    ○ "O jogo deu Velha"
+```
+
+```javascript
+let jogoVelha = [
+    [null, null, null],
+    [null, null, null],
+    [null, null, null]
+]
+
+// Adicionei a numeração das linhas e colunas para ficar mais fácil o entendimento
+let desenhaJogoVelha = () => {
+    console.log('   1   2   3  ');
+    console.log(`1  ${jogoVelha[0][0] || ' '} | ${jogoVelha[0][1] || ' '} | ${jogoVelha[0][2] || ' '} `);
+    console.log('  ___|___|___');
+    console.log(`2  ${jogoVelha[1][0] || ' '} | ${jogoVelha[1][1] || ' '} | ${jogoVelha[1][2] || ' '} `);
+    console.log('  ___|___|___');
+    console.log(`3  ${jogoVelha[2][0] || ' '} | ${jogoVelha[2][1] || ' '} | ${jogoVelha[2][2] || ' '} `);
+    console.log('     |   |   ');
+}
+
+// Função para verificar os erros propostos
+let verificarErro = (linha, coluna, marcado) => {
+    let msg = [], posicoes = [1, 2, 3], macadores = 'XO';
+    // Linha de 1 a 3
+    if (posicoes.indexOf(linha) === -1) {
+        msg.push('O número da linha deve estar entre 1 e 3, incluindo os mesmos.');
+    }
+    // Coluna de 1 a 3
+    if (posicoes.indexOf(coluna) === -1) {
+        msg.push('O número da coluna deve estar entre 1 e 3, incluindo os mesmos.');
+    }
+    // Marcadores 'X' ou 'O'
+    if (macadores.indexOf(marcado) === -1) {
+        msg.push('O valor deve ser X ou O.')
+    }
+    // Posição já preenchida
+    if (posicoes.indexOf(linha) > -1 && posicoes.indexOf(coluna) > -1 && jogoVelha[linha - 1][coluna - 1] !== null) {
+        msg.push('Posição já preenchida.')
+    }
+    // Se a quantidade de msg de erro forem zero, valida como verdadeiro (true)
+    // Senão imprime no console todos os erros e retorna false
+    if (msg.length === 0) return true;
+    else {
+        console.log(msg.reduce((result, m) => result + '\n' + m), '');
+        return false;
+    }
+}
+
+// Função para verificar a situação do jogo
+let validarSituacao = (linha, coluna, marcador) => {
+    // h quantidade do marcador na linha, v quantidade do marcador na coluna    
+    let h = 0, v = 0, blank = 0;
+    
+    // d1 e d2 são a quantidade do marcador na diagonal principal e secundária, respectivamente
+    let d1 = [jogoVelha[0][0], jogoVelha[1][1], jogoVelha[2][2]].filter((x) => x === marcador);
+    let d2 = [jogoVelha[0][2], jogoVelha[1][1], jogoVelha[2][0]].filter((x) => x === marcador);
+    
+    // velha respresenta se todos os campos foram marcados sem ganhador
+    // utilizado um find para verificar se ainda existe null em alguma posição
+    // caso não exista, retorna undefined
+    let velha = jogoVelha.find(x => x.reduce((b, y) => {
+        if (y === null) b = true
+        return b
+    }, false) === true);
+    
+    for (i in [1, 2, 3]) {
+        if (jogoVelha[linha - 1][i] === marcador) h += 1;
+        if (jogoVelha[i][coluna - 1] === marcador) v += 1;
+    }
+    
+    // O jogador ganha se seu marcador, após a jogada, for marcado em 3 posições na linha, coluna ou diagonal.
+    // Se não ganhou, verifica se deu velha.
+    // Caso contrário, ainda há posições para serem marcadas.
+    if (d1.length === 3 || d2.length === 3 || h === 3 || v === 3) console.log(`O jogador ${marcador} ganhou!`);
+    else if (velha === undefined) console.log('O jogo deu velha!');
+    else console.log('Jogo em andamento!');
+}
+
+let jogar = (linha, coluna, marcador) => {
+    // Aceita x, X, o ou O
+    marcador = marcador.toUpperCase();
+    if (verificarErro(linha, coluna, marcador)) {    
+        // Só marca se não houver erro
+        jogoVelha[linha - 1][coluna - 1] = marcador;
+        // Valida a situação após marcar
+        validarSituacao(linha, coluna, marcador);
+    }
+    desenhaJogoVelha();
+}
+
+desenhaJogoVelha();
 ```
