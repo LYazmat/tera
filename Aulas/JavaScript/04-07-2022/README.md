@@ -478,15 +478,9 @@ let cadastrarVoo = (codigo, partida, passageiros, valor, origem, destino) => {
     });
 }
 
-let buscaVooOrigem = (origem) => voos.reduce((resultado, voo) => {
-    if (voo.origem === origem) resultado.push(voo)
-    return resultado
-}, []);
+let buscaVooOrigem = (origem) => voos.filter((voo) => voo.origem === origem);
 
-let buscaVooDestino = (destino) => voos.reduce((resultado, voo) => {
-    if (voo.destino === destino) resultado.push(voo)
-    return resultado
-}, []);
+let buscaVooDestino = (destino) => voos.filter((voo) => voo.destino === destino);
 
 cadastrarVoo(1, '10:32', 120, 1220, 'SP', 'RJ');
 cadastrarVoo(2, '07:41', 80, 990, 'SP', 'CE');
