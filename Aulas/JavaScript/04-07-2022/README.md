@@ -181,7 +181,7 @@ let preencherNome = (nome, idade, endereco) => {
     return { nome: nome, idade: idade, endereco: endereco }
 };
 
-preencherNome('Camila', 23, 'Rua dos andradas, 21');
+console.log(preencherNome('Camila', 23, 'Rua dos andradas, 21'));
 ```
 <br>
 
@@ -241,7 +241,7 @@ let dobro = (arr) => {
 
 let numeros = [0, 2, 98, 75, 23, 18, 31, 7, 1]
 
-dobro(numeros)
+console.log(dobro(numeros));
 ```
 <br>
 
@@ -253,12 +253,12 @@ dobro(numeros)
 ```javascript
 let temO = (frutas) => {
 	// Utilizando toLowerCase() para considerar maiusculas também
-    return frutas.filter((fruta) => fruta.toLowerCase().indexOf('o') > -1);
+	return frutas.filter((fruta) => fruta.toLowerCase().indexOf('o') > -1);
 }
 
 let frutas = ['Abacaxi', 'Uva', 'Maçã', 'Goiaba', 'Abacate', 'Acerola']
 
-temO(frutas);
+console.log(temO(frutas));
 ```
 <br>
 
@@ -274,7 +274,7 @@ let primeiraO = (frutas) => {
 
 let frutas = ['Abacaxi', 'Uva', 'Maçã', 'Goiaba', 'Abacate', 'Acerola']
 
-primeiraO(frutas);
+console.log(primeiraO(frutas));
 ```
 <br>
 
@@ -289,7 +289,7 @@ let soma = (numeros) => {
 }
 
 let numeros = [1, 2, 3, 4, 5, 6];
-soma(numeros);
+console.log(soma(numeros));
 ```
 <br>
 
@@ -319,7 +319,7 @@ let arr = [
     { name: 'Pablo', age: 65 }
 ]
 
-idades(arr);
+console.log(idades(arr));
 ```
 <br>
 
@@ -341,6 +341,7 @@ let unirNome = (nome, sobrenome) => Object.assign({}, primeiroNome, sobrenome);
 let primeiroNome = { nome: 'João' }, sobrenome = { sobrenome: 'da Silva' };
 
 let pessoa = unirNome(primeiroNome, sobrenome);
+console.log(pessoa);
 ```
 <br>
 
@@ -375,7 +376,8 @@ let produto = {
     maisVendido: true
 }
 
-produto = mudarValor(produto, 35.00, 10)
+produto = mudarValor(produto, 35.00, 10);
+console.log(produto);
 ```
 <br>
 
@@ -399,7 +401,7 @@ let cesta = [
     { quantidade: 1, descricao: 'Como o racismo ...', vendido: 'Amazon', preco: 24.99 }
 ]
 
-filtroPreco(cesta)
+console.log(filtroPreco(cesta));
 ```
 <br>
 
@@ -419,7 +421,7 @@ let cesta = [
     { quantidade: 1, descricao: 'Como o racismo ...', vendido: 'Amazon', preco: 24.99 }
 ]
 
-total(cesta)
+console.log(total(cesta));
 ```
 <br>
 
@@ -441,7 +443,7 @@ let cesta = [
     { quantidade: 1, descricao: 'Como o racismo ...', vendido: 'Amazon', preco: 24.99 }
 ]
 
-nomeProdutos(cesta)
+console.log(nomeProdutos(cesta));
 ```
 <br>
 
