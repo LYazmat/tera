@@ -2,6 +2,6 @@
 
 > Readme em desenvolvimento
 
-'''
+```
 let teste = `${nome}`;
-'''
+```
