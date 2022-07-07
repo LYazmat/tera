@@ -487,6 +487,8 @@ let buscaVooOrigem = (origem) => voos.filter((voo) => voo.origem === origem);
 
 let buscaVooDestino = (destino) => voos.filter((voo) => voo.destino === destino);
 
+let buscaVooOrigemDestino = (origem, destino) => voos.filter((voo) => (voo.origem === origem && voo.destino === destino));
+
 cadastrarVoo(1, '10:32', 120, 1220, 'SP', 'RJ');
 cadastrarVoo(2, '07:41', 80, 990, 'SP', 'CE');
 cadastrarVoo(3, '04:25', 120, 820, 'SP', 'MT');
@@ -495,9 +497,11 @@ cadastrarVoo(5, '17:07', 60, 1800, 'BA', 'RJ');
 cadastrarVoo(6, '18:45', 85, 1150, 'SC', 'RJ');
 cadastrarVoo(7, '22:18', 105, 1400, 'SC', 'SP');
 cadastrarVoo(8, '00:14', 70, 1300, 'AC', 'RJ');
+cadastrarVoo(9, '03:14', 40, 300, 'SP', 'SC');
 
-buscaVooOrigem('RJ');
-buscaVooDestino('SP');
+console.log(buscaVooOrigem('RJ'));
+console.log(buscaVooDestino('SP'));
+console.log(buscaVooOrigemDestino('SP', 'SC'));
 ```
 <br>
 
