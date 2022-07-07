@@ -456,15 +456,20 @@ estrutura para representar esses dados? Deve ser possível armazenar mais de um 
 chamada, deve ser adicionado um item ao final,  com valores corretos.
 
 Exemplo:
+
     Entrada:
         cadastrarVoo(1, "10:32", 120, 1220, "SP", "RE")
 
-        Deve ser criada uma função que quando chamada deve retornar todos os voos disponíveis para a origem informada.
+Deve ser criada uma função que quando chamada deve retornar todos os voos disponíveis para a origem informada.
+
     Exemplo:
+    
         Entrada: buscarVooOrigem("SP")
 
-        Deve ser criada uma função que quando chamada deve retornar todos os voos disponíveis para o destino informado.
+Deve ser criada uma função que quando chamada deve retornar todos os voos disponíveis para o destino informado.
+
     Exemplo:
+    
         Entrada: buscarVooDestino("SP")
 ```
 
