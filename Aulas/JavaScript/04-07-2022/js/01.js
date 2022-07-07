@@ -16,5 +16,5 @@ let parImpar = (numero) => {
     console.log(`O número ${numero} é`, numero % 2 === 0 ? 'par' : 'impar');
 }
 
-let numero = 10;
-parImpar(numero);
+parImpar(2);
+parImpar(77);

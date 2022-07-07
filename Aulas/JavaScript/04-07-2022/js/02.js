@@ -9,8 +9,7 @@
 */
 
 let identificaParOuImpar = (numero) => {
-    return numero % 2 === 0 ? 'par' : 'impar';
+    return `O número ${numero} é ${numero % 2 === 0 ? 'par' : 'impar'}`;
 }
 
-let numero = 10;
-console.log(`O número ${numero} é`, identificaParOuImpar(numero));
+console.log(identificaParOuImpar(2));
