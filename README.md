@@ -1,7 +1,7 @@
 # Repositório para exercícios do curso Tera - Desenvolvimento FullStack
 
-> Readme em desenvolvimento
+![Size](https://img.shields.io/github/languages/code-size/badges/shields.svg)
+![Language Count](https://img.shields.io/github/languages/count/badges/shields.svg)
+![Top Language](https://img.shields.io/github/languages/top/badges/shields.svg)
 
-```
-let teste = `${nome}`;
-```
+> Readme em desenvolvimento
