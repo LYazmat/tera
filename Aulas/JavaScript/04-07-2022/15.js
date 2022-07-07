@@ -1,1 +1,0 @@
-/* Já estão com array function */
