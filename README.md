@@ -6,4 +6,4 @@
 
 > Readme em desenvolvimento
 
-![git-you](https://img.shields.io/badge/Github-Youtube-red?link=http://Github.com&link=http://youtube.com&logo=Github)
+![image](https://img.shields.io/badge/Github-Youtube-red?link=http://Github.com&link=http://youtube.com&logo=Github)
