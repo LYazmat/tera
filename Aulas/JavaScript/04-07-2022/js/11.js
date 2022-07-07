@@ -9,4 +9,4 @@ let temO = (frutas) => {
 
 let frutas = ['Abacaxi', 'Uva', 'Maçã', 'Goiaba', 'Abacate', 'Acerola']
 
-temO(frutas);
+console.log(temO(frutas));

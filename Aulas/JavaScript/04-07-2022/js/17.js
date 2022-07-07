@@ -15,4 +15,4 @@ let cesta = [
     { quantidade: 1, descricao: 'Como o racismo ...', vendido: 'Amazon', preco: 24.99 }
 ]
 
-filtroPreco(cesta)
+console.log(filtroPreco(cesta));

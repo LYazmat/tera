@@ -9,4 +9,4 @@ let dobro = (arr) => {
 
 let numeros = [0, 2, 98, 75, 23, 18, 31, 7, 1]
 
-dobro(numeros)
+console.log(dobro(numeros));

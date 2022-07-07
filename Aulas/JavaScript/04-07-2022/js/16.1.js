@@ -10,3 +10,5 @@ let unirNome = (nome, sobrenome) => Object.assign({}, primeiroNome, sobrenome);
 let primeiroNome = { nome: 'João' }, sobrenome = { sobrenome: 'da Silva' };
 
 let pessoa = unirNome(primeiroNome, sobrenome);
+
+console.log(pessoa);

@@ -18,4 +18,4 @@ let cesta = [
     { quantidade: 1, descricao: 'Como o racismo ...', vendido: 'Amazon', preco: 24.99 }
 ]
 
-nomeProdutos(cesta)
+console.log(nomeProdutos(cesta));

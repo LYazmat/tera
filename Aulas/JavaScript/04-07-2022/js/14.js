@@ -23,4 +23,4 @@ let arr = [
     { name: 'Pablo', age: 65 }
 ]
 
-idades(arr);
+console.log(idades(arr));

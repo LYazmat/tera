@@ -8,4 +8,4 @@ let soma = (numeros) => {
 }
 
 let numeros = [1, 2, 3, 4, 5, 6];
-soma(numeros);
+console.log(soma(numeros));

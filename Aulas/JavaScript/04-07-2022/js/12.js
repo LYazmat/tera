@@ -9,4 +9,4 @@ let primeiraO = (frutas) => {
 
 let frutas = ['Abacaxi', 'Uva', 'Maçã', 'Goiaba', 'Abacate', 'Acerola']
 
-primeiraO(frutas);
+console.log(primeiraO(frutas));

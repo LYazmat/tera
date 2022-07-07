@@ -27,4 +27,6 @@ let produto = {
     maisVendido: true
 }
 
-produto = mudarValor(produto, 35.00, 10)
+produto = mudarValor(produto, 35.00, 10);
+
+console.log(produto);
