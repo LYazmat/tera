@@ -507,6 +507,7 @@ Exemplo:
 
 ```
 Exemplo 2:
+
     Entrada:
         jogoVelha = [['X', '', 'O'], ['', '', ''], ['', 'X', 'O']]
         desenhaJogoVelha()
