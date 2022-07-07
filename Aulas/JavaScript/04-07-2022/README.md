@@ -2,12 +2,15 @@
 
 > ### 1 - Crie uma função que escreva uma mensagem informando se um número é par ou ímpar.
 ```
-Exemplo 1:  
+Exemplo 1:
+
     Entrada:  
         2  
     Saída:  
         O número 2 é par  
+	
 Exemplo 2:  
+
     Entrada:  
         77  
     Saída:  
@@ -27,6 +30,7 @@ parImpar(numero);
 > ### 2 - Crie uma nova função semelhante ao exercício anterior, porém agora ela deve retornar o texto que será usado por um console.log.
 ```
 Exemplo 1:
+
     Entrada:
         2
     Saída:
@@ -47,12 +51,14 @@ console.log(`O número ${numero} é`, identificaParOuImpar(numero));
 > ### 3 - Crie uma função que inverte a ordem dos itens de um array:
 ```
 Exemplo 1:
+
     Entrada:
         ["Abacaxi", "Uva", "Banana", "Maçã", "Goiaba"]
     Saída:
         ["Goiaba", "Maçã", "Banana", "Uva", "Abacaxi"]
 
-    Exemplo 2:
+Exemplo 2:
+
         Entrada:
             [10, 2, 45, 87, 99, 20, 1, 3]
         Saída:
@@ -75,6 +81,7 @@ console.log(arr, '=>', inverterArray(arr));
 > ### 4 - Crie uma função que retorne a soma entre dois números.
 ```
 Exemplo 1:
+
     Entrada:
         soma(3, 4)
     Saída:
@@ -94,6 +101,7 @@ console.log(`${a} + ${b} = ${soma(a, b)}`);
 > ### 5 - Faça uma função que irá receber um array de ingredientes e retornar um log com a mensagem de saída:
 ```
 Exemplo 1:
+
     Entrada:
         ["Pão", "Carne", "ovo", "bacon", "Mussarela", "Presunto", "Alface", "Tomate", "Batata Palha"]
     Saída:
@@ -119,6 +127,7 @@ mostraIngredientes(ingredientes);
 > ### 6 - Complemente o exercício anterior com outra função que quando chamada irá adicionar o ingrediente informado como parâmetro ao array de ingredientes e escreve uma nova mensagem de saída:
 ```
 Exemplo 1:
+
     Entrada: 
         array: ["Pão", "Carne", "ovo", "bacon", "Mussarela", "Presunto", "Alface", "Tomate", "Batata Palha"]
         adicionarIngrediente("Milho")
@@ -149,6 +158,7 @@ adicionarIngrediente('Milho');
 > ### 7 - Crie uma função que receba os dados: Nome, idade e endereço e retorne um objeto com essas propriedades.
 ```
 Exemplo 1:
+
     Entrada: 
         preencherNome("Camila", 23, "Rua dos Andradas, 21")
     Saída:
