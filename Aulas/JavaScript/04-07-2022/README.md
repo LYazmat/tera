@@ -312,38 +312,77 @@ idades(arr);
 ```
 <br>
 
-> ### 16 - Crie uma função que una os objetos abaixo em um outro objeto chamado pessoa
+> ### 16.1 - Crie uma função que una os objetos abaixo em um outro objeto chamado pessoa
 ```
 primeiroNome: { nome: 'João' }
 sobrenome: { sobrenome: 'da Silva' }
 ```
 
 ```
-let unir_nome = (nome, sobrenome) => Object.assign({}, primeiroNome, sobrenome);
+let unirNome = (nome, sobrenome) => Object.assign({}, primeiroNome, sobrenome);
 
 let primeiroNome = { nome: 'João' }, sobrenome = { sobrenome: 'da Silva' };
 
-let pessoa = unir_nome(primeiroNome, sobrenome);
+let pessoa = unirNome(primeiroNome, sobrenome);
 ```
 <br>
 
-> ###
+> ### 16.2 - Crie uma função que crie um novo objeto alterando apenas as propriedades abaixo:
+```
+produto: {
+    nome: "X-Tudo",
+    ingredientes: ["Pão", "Carne", "ovo", "bacon", "Mussarela", "Presunto", "Alface", "Tomate", "Batata Palha"],
+    servePessoas: 1,
+    valor: 24.98,
+    valorPromocional: 16.98,
+    maisVendido: true
+}
+
+Alterar o valor do produto para 35.00 e o valor promocional deve ser o valor do produto com 10% de desconto.
 ```
 
 ```
+let mudarValor = (produto, valor, desconto) => {
+    return Object.assign({}, produto, {
+        valor: valor,
+        valorPromocional: valor * (1 - desconto / 100)
+    });
+}
 
-```
+let produto = {
+    nome: 'X-tudo',
+    ingredientes: ['Pão', 'Carne', 'ovo', 'bacon', 'Mussarela', 'Presunto', 'Alface', 'Tomate', 'Batata Palha'],
+    servePessoas: 1,
+    valor: 24.98,
+    valorPromocional: 16.98,
+    maisVendido: true
+}
 
+produto = mudarValor(produto, 35.00, 10)
 ```
 <br>
 
-> ###
-```
+> ### 17 - Faça uma função que retorne o primeiro produto com valor entre 50 e 60 reais.
+
+<p align="center">
+  <img src='img/img-17jpg' style='width: 70%'>
+</p>
 
 ```
+let filtro_preco = (cesta) => cesta.filter((produto) => produto.preco >= 50 && produto.preco < 60)
 
-```
+let cesta = [
+    { quantidade: 1, descricao: 'Desafios e Enigmas ...', vendido: 'Amazon', preco: 47.20 },
+    { quantidade: 1, descricao: 'Mulheres que correm ...', vendido: 'Amazon', preco: 37.90 },
+    { quantidade: 1, descricao: 'O oráculo da noite ...', vendido: 'Amazon', preco: 66.31 },
+    { quantidade: 1, descricao: 'Seja homem: ...', vendido: 'Amazon', preco: 53.71 },
+    { quantidade: 1, descricao: 'Mulheres incríveis ...', vendido: 'Amazon', preco: 14.37 },
+    { quantidade: 1, descricao: 'A ciranda das mulheres ...', vendido: 'Amazon', preco: 13.90 },
+    { quantidade: 1, descricao: 'Sociedade do cansaço', vendido: 'Amazon', preco: 23.20 },
+    { quantidade: 1, descricao: 'Como o racismo ...', vendido: 'Amazon', preco: 24.99 }
+]
 
+filtro_preco(cesta)
 ```
 <br>
 
