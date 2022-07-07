@@ -365,11 +365,11 @@ produto = mudarValor(produto, 35.00, 10)
 > ### 17 - Faça uma função que retorne o primeiro produto com valor entre 50 e 60 reais.
 
 <p align="center">
-  <img src='img/img-17jpg' style='width: 70%'>
+  <img src='img/img-17.jpg' style='width: 70%'>
 </p>
 
 ```
-let filtro_preco = (cesta) => cesta.filter((produto) => produto.preco >= 50 && produto.preco < 60)
+let filtroPreco = (cesta) => cesta.filter((produto) => produto.preco >= 50 && produto.preco < 60)
 
 let cesta = [
     { quantidade: 1, descricao: 'Desafios e Enigmas ...', vendido: 'Amazon', preco: 47.20 },
@@ -382,17 +382,100 @@ let cesta = [
     { quantidade: 1, descricao: 'Como o racismo ...', vendido: 'Amazon', preco: 24.99 }
 ]
 
-filtro_preco(cesta)
+filtroPreco(cesta)
 ```
 <br>
 
-> ###
+> ### 18 - Utilizando o objeto criado no exercício anterior, faça uma função que retorne a soma dos itens na lista de compras (utiliza o reduce)
 ```
+let total = (cesta) => cesta.reduce(
+    (resultado, produto) => resultado + produto.preco * produto.quantidade, 0)
 
-```
+let cesta = [
+    { quantidade: 1, descricao: 'Desafios e Enigmas ...', vendido: 'Amazon', preco: 47.20 },
+    { quantidade: 1, descricao: 'Mulheres que correm ...', vendido: 'Amazon', preco: 37.90 },
+    { quantidade: 1, descricao: 'O oráculo da noite ...', vendido: 'Amazon', preco: 66.31 },
+    { quantidade: 1, descricao: 'Seja homem: ...', vendido: 'Amazon', preco: 53.71 },
+    { quantidade: 1, descricao: 'Mulheres incríveis ...', vendido: 'Amazon', preco: 14.37 },
+    { quantidade: 1, descricao: 'A ciranda das mulheres ...', vendido: 'Amazon', preco: 13.90 },
+    { quantidade: 1, descricao: 'Sociedade do cansaço', vendido: 'Amazon', preco: 23.20 },
+    { quantidade: 1, descricao: 'Como o racismo ...', vendido: 'Amazon', preco: 24.99 }
+]
 
-```
-
+total(cesta)
 ```
 <br>
 
+> ### 19 - Utilizando o objeto criado no exercício anterior, faça uma função que retorne o nome dos produtos que tenham o valor maior do que 25 reais.
+```
+let nomeProdutos = (cesta) => cesta.reduce((resultado, produto) => {
+    if (produto.preco > 25) resultado.push(produto.descricao)
+    return resultado
+}, [])
+
+let cesta = [
+    { quantidade: 1, descricao: 'Desafios e Enigmas ...', vendido: 'Amazon', preco: 47.20 },
+    { quantidade: 1, descricao: 'Mulheres que correm ...', vendido: 'Amazon', preco: 37.90 },
+    { quantidade: 1, descricao: 'O oráculo da noite ...', vendido: 'Amazon', preco: 66.31 },
+    { quantidade: 1, descricao: 'Seja homem: ...', vendido: 'Amazon', preco: 53.71 },
+    { quantidade: 1, descricao: 'Mulheres incríveis ...', vendido: 'Amazon', preco: 14.37 },
+    { quantidade: 1, descricao: 'A ciranda das mulheres ...', vendido: 'Amazon', preco: 13.90 },
+    { quantidade: 1, descricao: 'Sociedade do cansaço', vendido: 'Amazon', preco: 23.20 },
+    { quantidade: 1, descricao: 'Como o racismo ...', vendido: 'Amazon', preco: 24.99 }
+]
+
+nomeProdutos(cesta)
+```
+<br>
+
+> ### Desafio: Busca por voo
+```
+Vamos construir um conjunto de funções que vai salvar os dados de entrada sobre voos que estão para acontecer e depois podemos buscar algumas informações sobre os dados armazenados.
+
+Deve ser criada uma função que quando chamada seja passado os seguintes valores do voo como parâmetro: código, horário de partida, quantidade de passageiros, valor da passagem, origem e destino. Lembrete: qual a melhor estrutura para representar esses dados? Deve ser possível armazenar mais de um objeto. Sempre que a função for chamada, deve ser adicionado um item ao final,  com valores corretos.
+
+Exemplo:
+    Entrada:
+        cadastrarVoo(1, "10:32", 120, 1220, "SP", "RE")
+
+        Deve ser criada uma função que quando chamada deve retornar todos os voos disponíveis para a origem informada.
+    Exemplo:
+        Entrada: buscarVooOrigem("SP")
+
+        Deve ser criada uma função que quando chamada deve retornar todos os voos disponíveis para o destino informado.
+    Exemplo:
+        Entrada: buscarVooDestino("SP")
+```
+
+```
+let voos = [];
+
+let cadastrarVoo = (codigo, partida, passageiros, valor, origem, destino) => {
+    voos.push({
+        codigo: codigo, partida: partida, passageiros: passageiros,
+        valor: valor, origem: origem, destino: destino
+    });
+}
+
+let buscaVooOrigem = (origem) => voos.reduce((resultado, voo) => {
+    if (voo.origem === origem) resultado.push(voo)
+    return resultado
+}, []);
+
+let buscaVooDestino = (destino) => voos.reduce((resultado, voo) => {
+    if (voo.destino === destino) resultado.push(voo)
+    return resultado
+}, []);
+
+cadastrarVoo(1, '10:32', 120, 1220, 'SP', 'RJ');
+cadastrarVoo(2, '07:41', 80, 990, 'SP', 'CE');
+cadastrarVoo(3, '04:25', 120, 820, 'SP', 'MT');
+cadastrarVoo(4, '03:36', 110, 700, 'RJ', 'SP');
+cadastrarVoo(5, '17:07', 60, 1800, 'BA', 'RJ');
+cadastrarVoo(6, '18:45', 85, 1150, 'SC', 'RJ');
+cadastrarVoo(7, '22:18', 105, 1400, 'SC', 'SP');
+cadastrarVoo(8, '24:14', 70, 1300, 'AC', 'RJ');
+
+buscaVooOrigem('RJ');
+buscaVooDestino('SP');
+```
