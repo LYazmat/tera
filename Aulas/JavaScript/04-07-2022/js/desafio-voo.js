@@ -38,7 +38,7 @@ cadastrarVoo(4, '03:36', 110, 700, 'RJ', 'SP');
 cadastrarVoo(5, '17:07', 60, 1800, 'BA', 'RJ');
 cadastrarVoo(6, '18:45', 85, 1150, 'SC', 'RJ');
 cadastrarVoo(7, '22:18', 105, 1400, 'SC', 'SP');
-cadastrarVoo(8, '24:14', 70, 1300, 'AC', 'RJ');
+cadastrarVoo(8, '00:14', 70, 1300, 'AC', 'RJ');
 
 buscaVooOrigem('RJ');
 buscaVooDestino('SP');
