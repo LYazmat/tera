@@ -506,7 +506,7 @@ Exemplo:
 </p>
 
 ```
-        Exemplo 2:
+Exemplo 2:
     Entrada:
         jogoVelha = [['X', '', 'O'], ['', '', ''], ['', 'X', 'O']]
         desenhaJogoVelha()
