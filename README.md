@@ -1,9 +1,10 @@
 # Repositório para exercícios do curso Tera - Desenvolvimento FullStack
 
-![image](https://img.shields.io/github/languages/code-size/badges/shields.svg)
-![image](https://img.shields.io/github/languages/count/badges/shields.svg)
-![image](https://img.shields.io/github/languages/top/badges/shields.svg)
+![codesize](https://img.shields.io/github/languages/code-size/badges/shields.svg)
+![languages](https://img.shields.io/github/languages/count/badges/shields.svg)
+![toplanguage](https://img.shields.io/github/languages/top/badges/shields.svg)
+
+[![linkedin](https://img.shields.io/badge/Linkedin-FFFFFF?style=flat&logo=linkedin&logoColor=blue)](https://www.linkedin.com/in/marcus-vinicius-de-miranda)
+[![linkedin](https://img.shields.io/badge/Instagram-FFFFFF?style=flat&logo=instagram&logoColor=orange)](https://www.instagram.com/marcusmiran/)
 
 > Readme em desenvolvimento
-
-![image](https://img.shields.io/badge/Github-Youtube-red?link=http://Github.com&link=http://youtube.com&logo=Github)
