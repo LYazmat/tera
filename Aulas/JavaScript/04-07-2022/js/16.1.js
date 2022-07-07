@@ -1,6 +1,12 @@
+/*
+16 - Crie uma função que una os objetos abaixo em um outro objeto chamado pessoa
+    primeiroNome: { nome: 'João' }
+    sobrenome: { sobrenome: 'da Silva' }
+*/
 
-let unir_nome = (nome, sobrenome) => Object.assign({}, primeiroNome, sobrenome);
+
+let unirNome = (nome, sobrenome) => Object.assign({}, primeiroNome, sobrenome);
 
 let primeiroNome = { nome: 'João' }, sobrenome = { sobrenome: 'da Silva' };
 
-let pessoa = unir_nome(primeiroNome, sobrenome);
+let pessoa = unirNome(primeiroNome, sobrenome);

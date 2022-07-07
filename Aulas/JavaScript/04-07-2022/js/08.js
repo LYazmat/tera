@@ -1,3 +1,7 @@
+/*
+8 - Crie uma função que retorne a soma de todas as quantidades exibidas no carrinho abaixo:
+*/
+
 let quantidades = (cesta) => {
     return cesta.reduce((resultado, produto, index, arr) => resultado + produto.quantidade, 0)
 }

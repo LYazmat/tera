@@ -1,3 +1,7 @@
+/*
+18 - Utilizando o objeto criado no exercício anterior, faça uma função que retorne a soma dos itens na lista de compras (utiliza o reduce)
+*/
+
 let total = (cesta) => cesta.reduce(
     (resultado, produto) => resultado + produto.preco * produto.quantidade, 0)
 

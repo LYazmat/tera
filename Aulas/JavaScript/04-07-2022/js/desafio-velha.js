@@ -1,3 +1,38 @@
+/*
+Jogo da Velha:
+Vamos construir um jogo da velha, mas para isso algumas funções devem ser criadas. Siga cada exercício dessa etapa, para concluir o desafio
+
+Para cada jogada feita o programa deve ser capaz de escrever como está a visão do tabuleiro. Crie uma função que irá "desenhar" o jogo da velha sempre que for chamada.
+
+Exemplo:
+    Entrada:
+        jogoVelha = [['', '', ''], ['', '', ''], ['', '', '']]
+        desenhaJogoVelha()
+    Saída:
+        <img>
+        Exemplo 2:
+    Entrada:
+        jogoVelha = [['X', '', 'O'], ['', '', ''], ['', 'X', 'O']]
+        desenhaJogoVelha()
+    Saída:
+        <img>
+
+● Faça uma função chamada jogar, que deve receber como parametro o número da linha (1 a 3), o número da coluna (1 a 3) e qual vai ser a jogada no momento ("X" ou "O"). Toda vez que essa função for chamada, a matriz jogoDaVelha deve ser preenchida corretamente, e o jogo da velha deve ser "desenhado" no console.
+
+● Faça uma função que retorne uma mensagem de erro com o texto "Jogada Inválida" sempre que a função jogar for chamada descumprindo alguma das regras abaixo:
+    ○ Número da linha com valor diferente de 1, 2 ou 3
+    ○ Número da coluna com valor diferente de 1, 2 ou 3
+    ○ Valor da jogada diferente de "X" ou "O"
+    ○ Informar uma posição que não esteja vazia.
+
+● Faça funções que identifiquem ao final de uma jogada qual a situação do Jogo:
+    ○ "Jogo em Andamento!"
+    ○ "O Jogador X ganhou"
+    ○ "O Jogador O ganhou"
+    ○ "O jogo deu Velha"
+*/
+
+
 let jogoVelha = [
     [null, null, null],
     [null, null, null],

@@ -1,3 +1,23 @@
+/*
+Busca por voo
+
+Vamos construir um conjunto de funções que vai salvar os dados de entrada sobre voos que estão para acontecer e depois podemos buscar algumas informações sobre os dados armazenados.
+
+Deve ser criada uma função que quando chamada seja passado os seguintes valores do voo como parâmetro: código, horário de partida, quantidade de passageiros, valor da passagem, origem e destino. Lembrete: qual a melhor estrutura para representar esses dados? Deve ser possível armazenar mais de um objeto. Sempre que a função for chamada, deve ser adicionado um item ao final,  com valores corretos.
+
+Exemplo:
+    Entrada:
+        cadastrarVoo(1, "10:32", 120, 1220, "SP", "RE")
+
+        Deve ser criada uma função que quando chamada deve retornar todos os voos disponíveis para a origem informada.
+    Exemplo:
+        Entrada: buscarVooOrigem("SP")
+
+        Deve ser criada uma função que quando chamada deve retornar todos os voos disponíveis para o destino informado.
+    Exemplo:
+        Entrada: buscarVooDestino("SP")
+*/
+
 let voos = [];
 
 let cadastrarVoo = (codigo, partida, passageiros, valor, origem, destino) => {

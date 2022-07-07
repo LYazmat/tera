@@ -1,4 +1,8 @@
-let filtro_preco = (cesta) => cesta.filter((produto) => produto.preco >= 50 && produto.preco < 60)
+/*
+17 - Faça uma função que retorne o primeiro produto com valor entre 50 e 60 reais.
+*/
+
+let filtroPreco = (cesta) => cesta.filter((produto) => produto.preco >= 50 && produto.preco < 60)
 
 let cesta = [
     { quantidade: 1, descricao: 'Desafios e Enigmas ...', vendido: 'Amazon', preco: 47.20 },
@@ -11,4 +15,4 @@ let cesta = [
     { quantidade: 1, descricao: 'Como o racismo ...', vendido: 'Amazon', preco: 24.99 }
 ]
 
-filtro_preco(cesta)
+filtroPreco(cesta)

@@ -1,1 +1,5 @@
-/* Já estão com array function */
+/*
+15 - Resolver as funções anteriores agora utilizando apenas array function
+*/
+
+// já estão com array function 

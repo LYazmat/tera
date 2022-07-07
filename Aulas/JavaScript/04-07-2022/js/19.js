@@ -1,4 +1,8 @@
-let nome_produtos = (cesta) => cesta.reduce((resultado, produto) => {
+/*
+19 - Utilizando o objeto criado no exercício anterior, faça uma função que retorne o nome dos produtos que tenham o valor maior do que 25 reais.
+*/
+
+let nomeProdutos = (cesta) => cesta.reduce((resultado, produto) => {
     if (produto.preco > 25) resultado.push(produto.descricao)
     return resultado
 }, [])
@@ -14,4 +18,4 @@ let cesta = [
     { quantidade: 1, descricao: 'Como o racismo ...', vendido: 'Amazon', preco: 24.99 }
 ]
 
-nome_produtos(cesta)
+nomeProdutos(cesta)
