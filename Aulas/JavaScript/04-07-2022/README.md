@@ -68,7 +68,7 @@ Exemplo 2:
 ```javascript
 let inverterArray = (arr) => {
     let arr2 = [];
-    // A função shift adiciona o elemento no início do array, enquando a função push adiciona no final.
+    // A função unshift adiciona o elemento no início do array, enquando a função push adiciona no final.
     for (let i in arr) arr2.unshift(arr[i])
     return arr2;
 }
