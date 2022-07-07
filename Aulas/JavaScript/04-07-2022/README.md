@@ -22,6 +22,8 @@ let parImpar = (numero) => {
 let numero = 10;
 parImpar(numero);
 ```
+<br>
+  
 > ### 2 - Crie uma nova função semelhante ao exercício anterior, porém agora ela deve retornar o texto que será usado por um console.log.
 ```
 Exemplo 1:
@@ -40,6 +42,7 @@ let identificaParOuImpar = (numero) => {
 let numero = 10;
 console.log(`O número ${numero} é`, identificaParOuImpar(numero));
 ```
+<br>
 
 > ### 3 - Crie uma função que inverte a ordem dos itens de um array:
 ```
@@ -67,6 +70,7 @@ let inverterArray = (arr) => {
 let arr = ['Abacaxi', 'Uva', 'Banana', 'Maçã', 'Goiaba'];
 console.log(arr, '=>', inverterArray(arr));
 ```
+<br>
 
 > ### 4 - Crie uma função que retorne a soma entre dois números.
 ```
@@ -85,6 +89,7 @@ let soma = (a, b) => {
 let a = 3, b = 4;
 console.log(`${a} + ${b} = ${soma(a, b)}`);
 ```
+<br>
 
 > ### 5 - Faça uma função que irá receber um array de ingredientes e retornar um log com a mensagem de saída:
 ```
@@ -109,6 +114,7 @@ let ingredientes = ['Pão', 'Carne', 'Ovo', 'Bacon', 'Mussarela', 'Presunto', 'A
 
 mostraIngredientes(ingredientes);
 ```
+<br>
 
 > ### 6 - Complemente o exercício anterior com outra função que quando chamada irá adicionar o ingrediente informado como parâmetro ao array de ingredientes e escreve uma nova mensagem de saída:
 ```
@@ -137,10 +143,8 @@ let adicionarIngrediente = (ingrediente) => {
 }
 
 adicionarIngrediente('Milho');
-
-
-
 ```
+<br>
 
 > ### 7 - Crie uma função que receba os dados: Nome, idade e endereço e retorne um objeto com essas propriedades.
 ```
@@ -162,17 +166,194 @@ let preencherNome = (nome, idade, endereco) => {
 
 preencherNome('Camila', 23, 'Rua dos andradas, 21');
 ```
+<br>
 
+> ### 8 - Crie uma função que retorne a soma de todas as quantidades exibidas no carrinho abaixo:
+<p align="center">
+  <img src='img/img-8.jpg' style='width: 70%'>
+</p>
 
+```
+let quantidades = (cesta) => {
+    return cesta.reduce((resultado, produto, index, arr) => resultado + produto.quantidade, 0)
+}
 
+let produto1 = {
+    descricao: 'jaqueta trucker jeans manga longa com forro de pelo azul médio g',
+    valor: 249.99, valor_original: 249.99, empresa: 'C&A', quantidade: 1, imagem: 'link para foto'
+}
 
+let produto2 = {
+    descricao: 'mochila média ever after high 17z',
+    valor: 62.90, valor_original: 399.99, empresa: 'Mundo Bag', quantidade: 1, imagem: 'link para foto'
+}
 
+let produto3 = {
+    descricao: 'óculos de sol aviador ace dourado único',
+    valor: 69.99, valor_original: 69.99, empresa: 'C&A', quantidade: 2, imagem: 'link para foto'
+}
 
+let produto4 = {
+    descricao: 'suéter de pelúcia sharpe com zíper bege m',
+    valor: 199.99, valor_original: 199.99, empresa: 'C&A', quantidade: 1, imagem: 'link para foto'
+}
 
+let cesta = [produto1, produto2, produto3, produto4]
 
+console.log(quantidades(cesta));
+```
+<br>
 
+> ### 9 - Crie as funções acima utilizando array functions
+<br>
 
+```
+// já feito com array functions 
+```
+<br>
 
+> ### 10 - Faça uma função que retorne o dobre dos números do array abaixo.
+```
+[ 0, 2, 98, 75, 23, 18, 31, 7, 1 ]
+```
 
+```
+let dobro = (arr) => {
+    return arr.map((x) => x * 2);
+}
 
+let numeros = [0, 2, 98, 75, 23, 18, 31, 7, 1]
+
+dobro(numeros)
+```
+<br>
+
+> ### 11 - Faça uma função que retorne todas as frutas que tenham a letra "o"
+```
+[ "Abacaxi", "Uva", "Maçã", "Goiaba", "Abacate", "Acerola"]
+```
+
+```
+let temO = (frutas) => {
+	// Utilizando toLowerCase() para considerar maiusculas também
+    return frutas.filter((fruta) => fruta.toLowerCase().indexOf('o') > -1);
+}
+
+let frutas = ['Abacaxi', 'Uva', 'Maçã', 'Goiaba', 'Abacate', 'Acerola']
+
+temO(frutas);
+```
+<br>
+
+> ### 12 - Faça uma função que retorne a primeira fruta que tenha a letra "o" 
+```
+[ "Abacaxi", "Uva", "Maçã", "Goiaba", "Abacate", "Acerola"]
+```
+
+```
+let primeiraO = (frutas) => {
+    return frutas.find((fruta) => fruta.toLowerCase().indexOf('o') > -1);
+}
+
+let frutas = ['Abacaxi', 'Uva', 'Maçã', 'Goiaba', 'Abacate', 'Acerola']
+
+primeiraO(frutas);
+```
+<br>
+
+> ### 13 - Faça o somatório de todos os valores do array abaixo, utilizando reduce
+```
+[1, 2, 3, 4, 5, 6]
+```
+
+```
+let soma = (numeros) => {
+    return numeros.reduce((total, x) => total + x, 0);
+}
+
+let numeros = [1, 2, 3, 4, 5, 6];
+soma(numeros);
+```
+<br>
+
+> ### 14 - Faça uma função que retorne apenas as idades das pessoas, dado o objeto abaixo:
+```
+    [
+        { name: 'Camila', age: 17 },
+        { name: 'Jorge', age: 13 },
+        { name: 'Marcia', age: 56 },
+        { name: 'Barbara', age: 24 },
+        { name: 'Natan', age: 67 },
+        { name: 'Pablo', age: 65 }
+    ];
+```
+
+```
+let idades = (arr) => {
+    return arr.map((pessoa) => pessoa.age);
+}
+
+let arr = [
+    { name: 'Camila', age: 17 },
+    { name: 'Jorge', age: 13 },
+    { name: 'Marcia', age: 56 },
+    { name: 'Barbara', age: 24 },
+    { name: 'Natan', age: 67 },
+    { name: 'Pablo', age: 65 }
+]
+
+idades(arr);
+```
+<br>
+
+> ### 15 - Resolver as funções anteriores agora utilizando apenas array function
+```
+// já estão com array function 
+```
+<br>
+
+> ### 16 - Crie uma função que una os objetos abaixo em um outro objeto chamado pessoa
+```
+primeiroNome: { nome: 'João' }
+sobrenome: { sobrenome: 'da Silva' }
+```
+
+```
+let unir_nome = (nome, sobrenome) => Object.assign({}, primeiroNome, sobrenome);
+
+let primeiroNome = { nome: 'João' }, sobrenome = { sobrenome: 'da Silva' };
+
+let pessoa = unir_nome(primeiroNome, sobrenome);
+```
+<br>
+
+> ###
+```
+
+```
+
+```
+
+```
+<br>
+
+> ###
+```
+
+```
+
+```
+
+```
+<br>
+
+> ###
+```
+
+```
+
+```
+
+```
+<br>
 
