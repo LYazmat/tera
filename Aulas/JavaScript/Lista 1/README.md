@@ -88,5 +88,5 @@ let safra = {
 ```
 
 <p align="center">
-  <img src='img/voo.jpg' style='width: 30%'>
+  <img src='img/voo.jpg' style='width: 100%'>
 </p>
