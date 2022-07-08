@@ -86,7 +86,55 @@ let safra = {
     verduras: ['acelga', 'alface', 'chicória', 'escarola', 'espinafre', 'salsa']
 }
 ```
+<br>
 
 <p align="center">
   <img src='img/voo.jpg' style='width: 100%'>
 </p>
+
+```javascript
+let voo = {
+    partida: '20:30',
+    chegada: '21:35',
+    origem: 'Rio de Janeiro (SDU)',
+    destino: 'São Paulo (GRU)',
+    empresa: 'GOL Linhas Aereas S.A.',
+    valor: 1255,
+    tipo: 'ida e volta',
+    escala: false
+}
+```
+<br>
+
+<p align="center">
+  <img src='img/cesta.jpg' style='width: 60%'>
+</p>
+
+```javascript
+let cesta = [
+    {
+        codigo: 1,
+        descricao: 'BABY FLYER',
+        produto: '117.099000-000091',
+        cor: 'CAFE',
+        quantidade: 24,
+        valor: 56.29
+    },
+    {
+        codigo: 2,
+        descricao: 'BABY FLYER',
+        produto: '117.100000-000002',
+        cor: 'PRETO',
+        quantidade: 12,
+        valor: 48.40
+    },
+    {
+        codigo: 3,
+        descricao: 'BABY FLYER',
+        produto: '117.100000-007703',
+        cor: 'MOSTARDA/PRETO',
+        quantidade: 24,
+        valor: 48.40
+    }
+]
+```
