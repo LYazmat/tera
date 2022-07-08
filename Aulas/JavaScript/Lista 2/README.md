@@ -138,3 +138,134 @@ function operacao(operador) {
 
 operacao('+');
 ```
+<br>
+
+> ### 3- Retornar todas as frutas que tenham a letra "o"
+```
+[ "Abacaxi", "Uva", "Maçã", "Goiaba", "Abacate", "Acerola"]
+```
+
+```javascript
+function procurar(arr) {
+    let resultado = [];
+    for (let i=0; i < arr.length; i++){
+        for (let l=0; l < arr[i].length; l++){
+            if (arr[i][l].toLowerCase() === 'o') {
+                resultado.push(arr[i]);
+                break;
+            }
+        }
+    }
+    return resultado;
+}
+
+let arr = [ "Abacaxi", "Uva", "Maçã", "Goiaba", "Abacate", "Acerola"];
+console.log(procurar(arr));
+```
+<br>
+
+> ### 4- Faça um código em JS que informe o total de horas trabalhadas no dia de uma funcionária. Considerando as regras abaixo.
+```
+- Caso a funcionária trabalhe menos do que 6h, não deve ser descontado do tempo total o intervalo de almoço (1h) da mesma
+- Caso a funcionária trabalhe mais do que 6h, deve ser descontado do tempo total o intervalo de almoço (1h) da mesma.
+```
+
+```javascript
+function total(horas){
+    if (horas < 6) return horas;
+    else return horas - 1;
+}
+
+// Teste com doze horas
+console.log('Horas trabalhas', total(12));
+```
+<br>
+
+> ### 5- Faça um código em JS que realize a soma dos números pares pertencentes ao intervalo de 1 a 100 e retorne o resultado da soma.
+
+```javascript
+let somaPares = () => {
+    let resultado = 0;
+    for (let i=1; i <= 100; i++){
+        if (i % 2 === 0) resultado += i;
+    }
+    return resultado;
+}
+
+console.log(somaPares());
+```
+<br>
+
+> ### 6- Faça um código em JS que retorne os números do array abaixo de forma decrescente.
+```
+[ 0, 2, 98, 75, 23, 18, 31, 7, 1 ]
+```
+
+```javascript
+let decrescente = (arr) => {
+    let resultado = [];
+    for (let i in arr){
+        if (i === 0) {
+            resultado.push(arr[i]);
+        }
+        else {
+            let elemento = arr[i];
+            for (let j in resultado){
+                if (resultado[j] < elemento){
+                    let aux = resultado[j];
+                    resultado[j] = elemento;
+                    elemento = aux;
+                }
+            }
+            resultado.push(elemento);
+        }
+    }
+    return resultado;
+}
+let arr = [ 0, 2, 98, 75, 23, 18, 31, 7, 1 ];
+console.log(decrescente(arr));
+```
+<br>
+
+> ### 7- Faça um código em JS que retorne quantos dias existem entre as datas de início e fim da estrutura abaixo:
+```
+    [ { dateStart: '12/01/2022', dateEnd: '12/03/2022' },
+    { dateStart: '27/03/2022', dateEnd: '11/04/2022' },
+    { dateStart: '02/04/2022', dateEnd: '22/04/2022' },
+    { dateStart: '11/05/2022', dateEnd: '12/05/2022' } ]
+```
+
+```javascript
+// função para converter string dd/mm/aaaa para objeto Date
+function dataBr(data){
+    data = data.split('/');
+    return new Date(data[1]+'/'+data[0]+'/'+data[2]);
+}
+
+function dias(arr) {
+    let resultado = []
+    for (i in arr) {
+        let dias = (dataBr(arr[i].dateEnd) - dataBr(arr[i].dateStart)) / (1000 * 60 * 60 * 24);
+        resultado.push(dias)
+    }
+    return resultado;
+}
+
+let arr = [ { dateStart: '12/01/2022', dateEnd: '12/03/2022' },
+            { dateStart: '27/03/2022', dateEnd: '11/04/2022' },
+            { dateStart: '02/04/2022', dateEnd: '22/04/2022' },
+            { dateStart: '11/05/2022', dateEnd: '12/05/2022' } ];
+
+console.log(dias(arr));
+```
+<br>
+
+> ### 8- Faça um código em JS que estruture os dados, calcule e retorne o resultado do somatório da lista de compras abaixo:`
+
+<p align="center">
+  <img src='img/cesta-2.jpg' style='width: 70%'>
+</p>
+
+```javascript
+
+```
