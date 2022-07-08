@@ -81,9 +81,12 @@ console.log(typeof(10 == "10"));
 ```javascript
 let safra = {
     mes: 'Fevereiro',
-    frutas: [],
-    legumes: [],
-    verduras: []
+    frutas: ['abacate', 'ameixa', 'carambola', 'goiaba', 'jaca', 'limão', 'maça', 'mamão', 'manga', 'melancia', 'pera', 'uva'],
+    legumes: ['abóbora', 'abobrinha', 'beringela', 'beterrada', 'milho verde', 'quiabo', 'tomate'],
+    verduras: ['acelga', 'alface', 'chicória', 'escarola', 'espinafre', 'salsa']
 }
-
 ```
+
+<p align="center">
+  <img src='img/voo.jpg' style='width: 30%'>
+</p>
