@@ -387,7 +387,7 @@ console.log(produto);
 </p>
 
 ```javascript
-let filtroPreco = (cesta) => cesta.filter((produto) => produto.preco >= 50 && produto.preco <= 60)
+let filtroPreco = (cesta) => cesta.find((produto) => produto.preco >= 50 && produto.preco <= 60)
 
 let cesta = [
     { quantidade: 1, descricao: 'Desafios e Enigmas ...', vendido: 'Amazon', preco: 47.20 },
