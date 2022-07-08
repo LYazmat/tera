@@ -16,7 +16,6 @@
     ● “Nome: Susi”
     ● 10 == "10"
 ```
-<br>
 
 ```javascript
 console.log(typeof(87));
