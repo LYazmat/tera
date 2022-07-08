@@ -138,3 +138,25 @@ let cesta = [
     }
 ]
 ```
+<br>
+
+<p align="center">
+  <img src='img/livro.jpg' style='width: 60%'>
+</p>
+
+```javascript
+let livro = {
+    titulo: 'Para Educar Crianças Feministas',
+    autor: 'Chimamanda Ngozi Adichie',
+    imagem: 'https://images-na.ssl-images-amazon.com/images/I/51HNpcIQoTL._SX342_BO1,204,203,200_.jpg',
+    tipo: 'seminovo/usado',
+    editora: 'Companhia das Letras',
+    ano: 2019,
+    estante: 'Sociologia',
+    peso: 93,
+    isbn: 9788535928518,
+    idioma: 'Português',
+    cadastrado: '05/16/2022',
+    descricao: 'SKU 26742287. Acabamento: Brochura. Dimensão: 14 x 21 cm. Livro em bom estado de conservação. Possui vários grifos a lápis. Páginas: 96.'
+}
+```
