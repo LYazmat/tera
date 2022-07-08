@@ -260,12 +260,40 @@ console.log(dias(arr));
 ```
 <br>
 
-> ### 8- Faça um código em JS que estruture os dados, calcule e retorne o resultado do somatório da lista de compras abaixo:`
+> ### 8- Faça um código em JS que estruture os dados, calcule e retorne o resultado do somatório da lista de compras abaixo:
 
 <p align="center">
   <img src='img/cesta-2.jpg' style='width: 70%'>
 </p>
 
 ```javascript
+function somatorio(cesta){
+    let soma = 0;
+    for (let i in cesta) soma += cesta[i].valor * cesta[i].quantidade;
+    return soma;
+}
 
+let produto1 = {
+    descricao: 'jaqueta trucker jeans manga longa com forro de pelo azul médio g',
+    valor: 249.99, valor_original: 249.99, empresa: 'C&A', quantidade: 1, imagem: 'link para foto'
+}
+
+let produto2 = {
+    descricao: 'mochila média ever after high 17z',
+    valor: 62.90, valor_original: 399.99, empresa: 'Mundo Bag', quantidade: 1, imagem: 'link para foto'
+}
+
+let produto3 = {
+    descricao: 'óculos de sol aviador ace dourado único',
+    valor: 69.99, valor_original: 69.99, empresa: 'C&A', quantidade: 2, imagem: 'link para foto'
+}
+
+let produto4 = {
+    descricao: 'suéter de pelúcia sharpe com zíper bege m',
+    valor: 199.99, valor_original: 199.99, empresa: 'C&A', quantidade: 1, imagem: 'link para foto'
+}
+
+let cesta = [produto1, produto2, produto3, produto4]
+
+console.log(somatorio(cesta));
 ```
