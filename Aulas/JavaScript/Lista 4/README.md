@@ -96,6 +96,10 @@ console.log(agente);
 Adicione atributos que façam sentido.
 ```
 
+<p align="center">
+  <img src='img/veiculo.jpg' style='width: 60%'>
+</p>
+
 ```javascript
 class Veiculo {
     constructor(cor, peso, descricao) {
