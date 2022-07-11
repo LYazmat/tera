@@ -1,40 +1,40 @@
 class Pessoa {
 
     constructor(nome, endereco) {
-        this.nomePessoa = nome;
-        this.enderecoPessoa = endereco;
+        this.nome = nome;
+        this.endereco = endereco;
     }
 
     get nome() {
-        return this.nomePessoa;
+        return this._nome;
     }
 
-    set nome(nome) {
-        this.nomePessoa = nome;
+    set nome(novoNome) {
+        this._nome = novoNome;
     }
 
     get endereco() {
-        return this.enderecoPessoa;
+        return this._enderecoPessoa;
     }
 
-    set endereco(endereco) {
-        this.enderecoPessoa = endereco;
+    set endereco(novoEndereco) {
+        this._enderecoPessoa = novoEndereco;
     }
 }
 
 class Tripulacao extends Pessoa {
 
-    constructor(nome, endereco, id) {
+    constructor(nome, endereco, idTripulacao) {
         super(nome, endereco);
-        this.id = id;
+        this.idTripulacao = idTripulacao;
     }
 
     get idTripulacao() {
-        return this.id;
+        return this._idTripulacao;
     }
 
-    set idTripulacao(id) {
-        this.id = id;
+    set idTripulacao(novoIdTripulacao) {
+        this._idTripulacao = novoIdTripulacao;
     }
 
 }
@@ -42,34 +42,34 @@ class Tripulacao extends Pessoa {
 
 class Passageiro extends Pessoa {
 
-    constructor(nome, endereco, smiles) {
+    constructor(nome, endereco, numeroSmiles) {
         super(nome, endereco);
-        this.smiles = smiles;
+        this.numeroSmiles = numeroSmiles;
     }
 
     get numeroSmiles() {
-        return this.smiles;
+        return this._numeroSmiles;
     }
 
-    set numeroSmiles(smiles) {
-        this.smiles = smiles;
+    set numeroSmiles(novoNumeroSmiles) {
+        this._numeroSmiles = novoNumeroSmiles;
     }
 
 }
 
 class Agente extends Pessoa {
 
-    constructor(nome, endereco, id) {
+    constructor(nome, endereco, idAgente) {
         super(nome, endereco);
-        this.id = id;
+        this.idAgente = idAgente;
     }
 
     get idAgente() {
-        return this.id;
+        return this._idAgente;
     }
 
-    set idAgente(id) {
-        this.id = id;
+    set idAgente(novoIdAgente) {
+        this._idAgente = novoIdAgente;
     }
 
 }
