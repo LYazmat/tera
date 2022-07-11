@@ -155,18 +155,18 @@ class Pickup extends Carro {
 > ### 3 - Crie classes para representar uma lista de compras, onde teremos as seguintes entidades e funcionalidades:
 
 ```
-    ● Um pedido é a representação de uma lista de compra, onde ele pode ter: um codigo,
-    um conjunto de arrays, calcular o total da compra, aplicar desconto, adicionar novo
-    item ao carrinho, aumentar ou reduzir a quantidade de um item no carrinho.
+● Um pedido é a representação de uma lista de compra, onde ele pode ter: um codigo,
+um conjunto de arrays, calcular o total da compra, aplicar desconto, adicionar novo
+item ao carrinho, aumentar ou reduzir a quantidade de um item no carrinho.
 
-    ● Um item é a representação de um produto que faz parte da lista de compras, onde
-    ele pode ter: um código, nome, quantidade e valor. Ele pode reduzir ou aumentar a
-    quantidade de um item.
+● Um item é a representação de um produto que faz parte da lista de compras, onde
+ele pode ter: um código, nome, quantidade e valor. Ele pode reduzir ou aumentar a
+quantidade de um item.
 
-    Crie a classe Pedido que utilize a classe Item para construir os itens do pedido.
-        - Para adicionar um novo item é preciso chamar Pedido.adicionarItem(novoItem)
-        - Para aumentar a quantidade é preciso chamar Pedido.aumentarQuantidade(item)
-        - Implemente as funcionalidades dos métodos criados.
+Crie a classe Pedido que utilize a classe Item para construir os itens do pedido.
+    - Para adicionar um novo item é preciso chamar Pedido.adicionarItem(novoItem)
+    - Para aumentar a quantidade é preciso chamar Pedido.aumentarQuantidade(item)
+    - Implemente as funcionalidades dos métodos criados.
 ```
 
 ```javascript
