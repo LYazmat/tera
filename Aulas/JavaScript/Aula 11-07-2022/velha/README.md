@@ -4,6 +4,10 @@
 
 > ## Jogo da Velha
 <br>
+<p align="center">
+  <img src='img/velha.jpg' style='width: 40%'>
+</p>
+<br>
 
 ```html
 <!DOCTYPE html>
