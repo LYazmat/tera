@@ -1,0 +1,53 @@
+body {
+    font-family: cursive, fantasy, Arial;
+}
+
+table,
+td,
+th {
+    border: 1px solid;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+table {
+    width: 210px;
+    height: 210px;
+    border-collapse: collapse;
+    transform: translate(-50%);
+}
+
+.div-tabela {
+    align-content: center;
+    margin-left: 50%;
+}
+
+.cedula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 70px;
+    min-height: 70px;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.red {
+    color: red;
+}
+
+.botao {
+    transform: translate(-50%);
+}
+
+.disabled-click {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    transform: translate(-50%);
+    text-align: center;
+}
