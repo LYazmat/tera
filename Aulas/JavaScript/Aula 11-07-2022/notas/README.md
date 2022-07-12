@@ -5,7 +5,7 @@
 > ## Calcular Notas
 <br>
 <p align="center">
-  <img src='img/notas.jpg' style='width: 35%'>
+  <img src='img/notas.jpg' style='width: 65%'>
 </p>
 <br>
 
