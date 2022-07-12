@@ -5,7 +5,7 @@
 > ## Jogo da Velha
 <br>
 <p align="center">
-  <img src='img/velha.jpg' style='width: 40%'>
+  <img src='img/velha.jpg' style='width: 30%'>
 </p>
 <br>
 
