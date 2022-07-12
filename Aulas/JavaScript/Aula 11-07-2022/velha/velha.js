@@ -11,7 +11,7 @@ $(document).ready(function() {
         ['#v-3-1', '#v-3-2', '#v-3-3']
     ]
 
-    // Mudar vetor sempre que marcar
+    // Mudar variável jogoVelha sempre que marcar
     let setVelha = () => {
         jogoVelha = posicoes.map((x) => x.map((y) => $(y).html()));
     };
