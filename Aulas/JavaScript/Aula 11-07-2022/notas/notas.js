@@ -1,0 +1,26 @@
+$(function () {
+
+    $('#calcular').click(function () {
+        let nome = $('#nome').val(), pTrim = $('#p-trim').val(),
+            sTrim = $('#s-trim').val(), tTrim = $('#t-trim').val();
+        if ([nome, pTrim, sTrim, tTrim].every(x => x !== '')) {
+            let media = (+pTrim + +sTrim + +tTrim) / 3;
+            let status = media < 15 ?
+                '<span class="reprovado">Reprovado</span>' :
+                '<span class="aprovado">Aprovado</span>';
+            let linha = `<tr>
+                            <td>${nome}</td>
+                            <td>${pTrim}</td>
+                            <td>${sTrim}</td>
+                            <td>${tTrim}</td>
+                            <td>${status}</td>
+                        </tr>`;
+            $('#tabela tbody tr:last').after(linha);
+            $('#nome').val('');
+            $('#p-trim').val('');
+            $('#s-trim').val('');
+            $('#t-trim').val('');
+        } else alert('Informe os valores!');
+    });
+
+});

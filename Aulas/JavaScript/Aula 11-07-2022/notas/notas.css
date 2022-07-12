@@ -1,0 +1,73 @@
+body {
+    font-family: cursive, fantasy, Arial;
+    text-align: center;
+}
+
+div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.nome {
+    margin-top: 10vh !important;
+    margin-bottom: 40px !important;
+}
+
+#nome {
+    width: 30%;
+}
+
+.notas {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50vw;
+    transform: translate(-50%);
+}
+
+.notas div {
+    display: inline-block;
+    text-align: center;
+}
+
+.notas input {
+    width: 60%;
+}
+
+.div-tabela {
+    margin-top: 40px;
+    margin-left: 50vw;
+    transform: translate(-50%);
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+tr,
+td {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+th {
+    background-color: black;
+    border-left: 0;
+    border-right: 0;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+
+span.aprovado {
+    color: green;
+}
+
+span.reprovado {
+    color: red;
+}
