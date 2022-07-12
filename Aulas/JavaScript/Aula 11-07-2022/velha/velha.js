@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // Validar marcadoes => 3 marcacoes no array significa que ganhou
+    // Validar marcadores => 3 marcações no array significa que ganhou
     let marcacoes = (arr) => {
         if (arr.length === 3) {
             ganhador = marcador;
