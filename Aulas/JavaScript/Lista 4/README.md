@@ -1,5 +1,6 @@
 [![linkedin](https://img.shields.io/badge/Linkedin-FFFFFF?style=flat&logo=linkedin&logoColor=blue)](https://www.linkedin.com/in/marcus-vinicius-de-miranda)
-[![linkedin](https://img.shields.io/badge/Instagram-FFFFFF?style=flat&logo=instagram&logoColor=orange)](https://www.instagram.com/marcusmiran/)
+[![instagram](https://img.shields.io/badge/Instagram-FFFFFF?style=flat&logo=instagram&logoColor=orange)](https://www.instagram.com/marcusmiran/)
+[![instagram](https://img.shields.io/badge/Twitch-FFFFFF?style=flat&logo=twitch&logoColor=purple)](https://www.twitch.tv/lyazmat)
 
 ## Lista 4 de Exercício Javascript
 
@@ -13,8 +14,8 @@
 class Pessoa {
 
     constructor(nome, endereco) {
-        this.nome = nome;
-        this.endereco = endereco;
+        this._nome = nome;
+        this._endereco = endereco;
     }
 
     get nome() {
@@ -26,11 +27,11 @@ class Pessoa {
     }
 
     get endereco() {
-        return this._enderecoPessoa;
+        return this._endereco;
     }
 
     set endereco(novoEndereco) {
-        this._enderecoPessoa = novoEndereco;
+        this._endereco = novoEndereco;
     }
 }
 
@@ -38,7 +39,7 @@ class Tripulacao extends Pessoa {
 
     constructor(nome, endereco, idTripulacao) {
         super(nome, endereco);
-        this.idTripulacao = idTripulacao;
+        this._idTripulacao = idTripulacao;
     }
 
     get idTripulacao() {
@@ -56,7 +57,7 @@ class Passageiro extends Pessoa {
 
     constructor(nome, endereco, numeroSmiles) {
         super(nome, endereco);
-        this.numeroSmiles = numeroSmiles;
+        this._numeroSmiles = numeroSmiles;
     }
 
     get numeroSmiles() {
@@ -73,7 +74,7 @@ class Agente extends Pessoa {
 
     constructor(nome, endereco, idAgente) {
         super(nome, endereco);
-        this.idAgente = idAgente;
+        this._idAgente = idAgente;
     }
 
     get idAgente() {

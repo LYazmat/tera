@@ -15,6 +15,7 @@ class Animal {
     }
 }
 
+// Cachoro herda classe Animal
 class Cachorro extends Animal {
     constructor(nome, raca, cor, tamanho) {
         super(tamanho, cor);
@@ -30,6 +31,7 @@ class Cachorro extends Animal {
 let cachorro = new Cachorro('Billy', 'Pitbull', 'Cinza e Marrom', 'Grande');
 cachorro.latir();
 
+// Gato herda classe Animal
 class Gato extends Animal {
     constructor(nome, raca, cor, tamanho) {
         super(tamanho, cor);
