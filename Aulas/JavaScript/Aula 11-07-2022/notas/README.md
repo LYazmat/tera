@@ -100,7 +100,8 @@ div.nome {
 }
 
 .notas input {
-    width: 60%;
+    width: 60%;    
+    text-align: center;
 }
 
 .div-tabela {
