@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     /* 
         Configurações iniciais
         A ideia principal é atribuir a cada elemento da velha o respectivo
@@ -11,16 +11,16 @@ $(document).ready(function() {
     // Posições: array contendo as células da velha
     // d1 - diagonal principal, d2 - diagonal secundaria
     const posicoes = [
-            [$('#v-1-1'), $('#v-1-2'), $('#v-1-3')],
-            [$('#v-2-1'), $('#v-2-2'), $('#v-2-3')],
-            [$('#v-3-1'), $('#v-3-2'), $('#v-3-3')]
-        ],
+        [$('#v-1-1'), $('#v-1-2'), $('#v-1-3')],
+        [$('#v-2-1'), $('#v-2-2'), $('#v-2-3')],
+        [$('#v-3-1'), $('#v-3-2'), $('#v-3-3')]
+    ],
         d1 = [$('#v-1-1'), $('#v-2-2'), $('#v-3-3')],
         d2 = [$('#v-3-1'), $('#v-2-2'), $('#v-1-3')];
 
     // Adicionar método change para cada elemento
     posicoes.forEach((p, linha) => p.forEach((x, coluna) => {
-        x.change(function() {
+        x.change(function () {
 
             // Altera o elemento no DOM com a marcação
             x.html(marcador);
@@ -70,14 +70,14 @@ $(document).ready(function() {
                 }
             } else {
                 // Se houve ganhador, exibe quem ganhou e bloqueia o jogo
-                $('h2').html(`O jogador ${marcador} ganhou!`);
+                $('h2').html(`O jogador ${ganhador} ganhou!`);
                 $('table').addClass('disabled-click');
             }
         });
     }))
 
     // Função que chama a função change ao clicar
-    $(".cedula").click(function() {
+    $(".cedula").click(function () {
         if ($(this).html() === '') {
             $(this).change();
         } else {
@@ -86,7 +86,7 @@ $(document).ready(function() {
     });
 
     // Resetar jogo
-    $('.botao').click(function() {
+    $('.botao').click(function () {
         $('table').removeClass('disabled-click');
         $('h2').html('');
         posicoes.forEach((x) => x.forEach((y) => {
