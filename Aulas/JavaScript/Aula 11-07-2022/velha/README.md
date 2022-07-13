@@ -151,16 +151,17 @@ $(document).ready(function() {
     */
     let marcador = 'X',
         ganhador = '',
-        restante = 9,
-        posicoes = [
+        restante = 9;
+
+    // Posições: array contendo as células da velha
+    // d1 - diagonal principal, d2 - diagonal secundaria
+    const posicoes = [
             [$('#v-1-1'), $('#v-1-2'), $('#v-1-3')],
             [$('#v-2-1'), $('#v-2-2'), $('#v-2-3')],
             [$('#v-3-1'), $('#v-3-2'), $('#v-3-3')]
-        ];
-
-    // d1 - diagonal principal, d2 - diagonal secundaria
-    let d1 = [$('#v-1-1'), $('#v-2-2'), $('#v-3-3')];
-    let d2 = [$('#v-3-1'), $('#v-2-2'), $('#v-1-3')];
+        ],
+        d1 = [$('#v-1-1'), $('#v-2-2'), $('#v-3-3')],
+        d2 = [$('#v-3-1'), $('#v-2-2'), $('#v-1-3')];
 
     // Adicionar método change para cada elemento
     posicoes.forEach((p, linha) => p.forEach((x, coluna) => {
@@ -208,7 +209,7 @@ $(document).ready(function() {
                     // Muda o marcador casa ainda exista posições para preencher
                     marcador = marcador === 'X' ? 'O' : 'X';
                 } else {
-                    // Se deu velha, exibe que deu velha e bloqueia o jogo
+                    // Se não há mais posições: deu velha, exibe que deu velha e bloqueia o jogo
                     $('h2').html(`Deu velha!`);
                     $('table').addClass('disabled-click');
                 }
