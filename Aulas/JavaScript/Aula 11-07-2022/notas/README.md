@@ -145,14 +145,16 @@ span.reprovado {
 ```
 
 ```javascript
-$(function () {
+$(function() {
 
-    $('#calcular').click(function () {
-        let nome = $('#nome').val(), pTrim = $('#p-trim').val(),
-            sTrim = $('#s-trim').val(), tTrim = $('#t-trim').val();
+    $('#calcular').click(function() {
+        let nome = $('#nome').val(),
+            pTrim = $('#p-trim').val(),
+            sTrim = $('#s-trim').val(),
+            tTrim = $('#t-trim').val();
         if ([nome, pTrim, sTrim, tTrim].every(x => x !== '')) {
-            let media = (+pTrim + +sTrim + +tTrim) / 3;
-            let status = media < 15 ?
+            let media = +pTrim + +sTrim + +tTrim;
+            let status = media < 60 ?
                 '<span class="reprovado">Reprovado</span>' :
                 '<span class="aprovado">Aprovado</span>';
             let linha = `<tr>
