@@ -163,10 +163,7 @@ $(function () {
                             <td>${status}</td>
                         </tr>`;
             $('#tabela tbody tr:last').after(linha);
-            $('#nome').val('');
-            $('#p-trim').val('');
-            $('#s-trim').val('');
-            $('#t-trim').val('');
+            $('input').val('');
         } else alert('Informe os valores!');
     });
 

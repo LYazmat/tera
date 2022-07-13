@@ -61,12 +61,11 @@
             </tr>
         </table>
         <h2></h2>
-        <button class="botao" type="button">Resetar</button>
+        <button class="botao" type="button">Jogar Novamente</button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="velha.js" type="text/javascript"></script>
 </body>
 
@@ -79,7 +78,7 @@ body {
 }
 
 table {
-    border-collapse: collapse;    
+    border-collapse: collapse;
 }
 
 table td {
@@ -135,9 +134,6 @@ table {
 
 .disabled-click {
     pointer-events: none;
-    cursor: default;
-    text-decoration: none;
-    color: black;
 }
 
 h2 {

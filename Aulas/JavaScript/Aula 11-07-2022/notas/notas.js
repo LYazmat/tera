@@ -1,8 +1,10 @@
-$(function () {
+$(function() {
 
-    $('#calcular').click(function () {
-        let nome = $('#nome').val(), pTrim = $('#p-trim').val(),
-            sTrim = $('#s-trim').val(), tTrim = $('#t-trim').val();
+    $('#calcular').click(function() {
+        let nome = $('#nome').val(),
+            pTrim = $('#p-trim').val(),
+            sTrim = $('#s-trim').val(),
+            tTrim = $('#t-trim').val();
         if ([nome, pTrim, sTrim, tTrim].every(x => x !== '')) {
             let media = (+pTrim + +sTrim + +tTrim) / 3;
             let status = media < 15 ?
@@ -16,10 +18,7 @@ $(function () {
                             <td>${status}</td>
                         </tr>`;
             $('#tabela tbody tr:last').after(linha);
-            $('#nome').val('');
-            $('#p-trim').val('');
-            $('#s-trim').val('');
-            $('#t-trim').val('');
+            $('input').val('');
         } else alert('Informe os valores!');
     });
 

@@ -59,9 +59,6 @@ table {
 
 .disabled-click {
     pointer-events: none;
-    cursor: default;
-    text-decoration: none;
-    color: black;
 }
 
 h2 {
