@@ -143,23 +143,15 @@ h2 {
 ```
 
 ```javascript
-$(document).ready(function () {
-
-    // Validar marcadores => 3 marcações no array significa que ganhou
-    let marcacoes = (arr) => {
-        if (arr.length === 3) {
-            ganhador = marcador;
-            arr.forEach((x) => x.addClass('red'));
-        }
-    }
-
+$(document).ready(function() {
     /* 
-    Configurações iniciais
-    A ideia principal é atribuir a cada elemento da velha o respectivo
-    elemento (em jQuery) da tabela do DOM
+        Configurações iniciais
+        A ideia principal é atribuir a cada elemento da velha o respectivo
+        elemento (em jQuery) da tabela do DOM
     */
     let marcador = 'X',
         ganhador = '',
+        restante = 9,
         posicoes = [
             [$('#v-1-1'), $('#v-1-2'), $('#v-1-3')],
             [$('#v-2-1'), $('#v-2-2'), $('#v-2-3')],
@@ -172,14 +164,20 @@ $(document).ready(function () {
 
     // Adicionar método change para cada elemento
     posicoes.forEach((p, linha) => p.forEach((x, coluna) => {
-        x.change(function () {
+        x.change(function() {
 
             // Altera o elemento no DOM com a marcação
             x.html(marcador);
 
+            // Diminui a quantidade posições para marcar
+            restante--;
+
             // Arrays que conterão a quantidde marcada para cada situação
             // d1_g e d2_g são verificações nas diagonais, h e v para a linha e coluna
-            let d1_g = [], d2_g = [], h = [], v = [];
+            let d1_g = [],
+                d2_g = [],
+                h = [],
+                v = [];
 
             // Verificar se é diagonal principal
             if (linha === coluna) d1_g = d1.filter((x) => x.html() === marcador);
@@ -194,21 +192,26 @@ $(document).ready(function () {
             });
 
             // Verificar se houve ganhador e alterar o style
-            [d1_g, d2_g, h, v].forEach((arr) => marcacoes(arr));
+            [d1_g, d2_g, h, v].forEach((arr) => {
+                // Validar marcadores => 3 marcações no array significa que ganhou
+                if (arr.length === 3) {
+                    // Atribui o ganhador
+                    ganhador = marcador;
+                    // Marca de vermelho onde ganhou
+                    arr.forEach((x) => x.addClass('red'));
+                }
+            });
 
-            // Senão houve ganhador verificar se deu velha ou se o jogo continua
+            // Se não houve ganhador verificar se deu velha ou se o jogo continua
             if (ganhador === '') {
-                // Se retornar undefined significa que não há mais posições para marcar
-                let velha = posicoes.find(x => x.reduce((b, y) => {
-                    if (y.html() === '') b = true
-                    return b
-                }, false) === true);
-
-                if (velha === undefined) {
+                if (restante > 0) {
+                    // Muda o marcador casa ainda exista posições para preencher
+                    marcador = marcador === 'X' ? 'O' : 'X';
+                } else {
                     // Se deu velha, exibe que deu velha e bloqueia o jogo
                     $('h2').html(`Deu velha!`);
                     $('table').addClass('disabled-click');
-                } else marcador = marcador === 'X' ? 'O' : 'X'; // <- Muda o marcador se o jogo continuar
+                }
             } else {
                 // Se houve ganhador, exibe quem ganhou e bloqueia o jogo
                 $('h2').html(`O jogador ${marcador} ganhou!`);
@@ -218,7 +221,7 @@ $(document).ready(function () {
     }))
 
     // Função que chama a função change ao clicar
-    $(".cedula").click(function () {
+    $(".cedula").click(function() {
         if ($(this).html() === '') {
             $(this).change();
         } else {
@@ -227,7 +230,7 @@ $(document).ready(function () {
     });
 
     // Resetar jogo
-    $('.botao').click(function () {
+    $('.botao').click(function() {
         $('table').removeClass('disabled-click');
         $('h2').html('');
         posicoes.forEach((x) => x.forEach((y) => {
@@ -236,6 +239,7 @@ $(document).ready(function () {
         }));
         marcador = 'X';
         ganhador = '';
+        restante = 9;
     });
 
 });
