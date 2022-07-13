@@ -215,7 +215,7 @@ $(document).ready(function() {
                 }
             } else {
                 // Se houve ganhador, exibe quem ganhou e bloqueia o jogo
-                $('h2').html(`O jogador ${marcador} ganhou!`);
+                $('h2').html(`O jogador ${ganhador} ganhou!`);
                 $('table').addClass('disabled-click');
             }
         });
