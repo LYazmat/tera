@@ -18,7 +18,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="notas.css">
+    <link rel="stylesheet" href="notas.css">    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -59,8 +61,6 @@
             </tbody>
         </table>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="notas.js" type="text/javascript"></script>
 </body>
 
@@ -145,14 +145,16 @@ span.reprovado {
 ```
 
 ```javascript
-$(function () {
+$(function() {
 
-    $('#calcular').click(function () {
-        let nome = $('#nome').val(), pTrim = $('#p-trim').val(),
-            sTrim = $('#s-trim').val(), tTrim = $('#t-trim').val();
+    $('#calcular').click(function() {
+        let nome = $('#nome').val(),
+            pTrim = $('#p-trim').val(),
+            sTrim = $('#s-trim').val(),
+            tTrim = $('#t-trim').val();
         if ([nome, pTrim, sTrim, tTrim].every(x => x !== '')) {
-            let media = (+pTrim + +sTrim + +tTrim) / 3;
-            let status = media < 15 ?
+            let media = +pTrim + +sTrim + +tTrim;
+            let status = media < 60 ?
                 '<span class="reprovado">Reprovado</span>' :
                 '<span class="aprovado">Aprovado</span>';
             let linha = `<tr>
