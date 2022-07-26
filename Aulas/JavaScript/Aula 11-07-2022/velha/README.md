@@ -234,10 +234,8 @@ $(document).ready(function() {
     $('.botao').click(function() {
         $('table').removeClass('disabled-click');
         $('h2').html('');
-        posicoes.forEach((x) => x.forEach((y) => {
-            y.html('');
-            y.removeClass('red');
-        }));
+        $('.cedula').html('');
+        $('.cedula').removeClass('red');
         marcador = 'X';
         ganhador = '';
         restante = 9;
