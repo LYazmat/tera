@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsividade</title>
+    <style>
+      /*fixa = pixels relativa = em e rem*/
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 22px;
+      }
+
+      body {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+      }
+
+      div {
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+
+      p {
+        font-size: 2.5em;
+        padding: 1.5em;
+      }
+
+      div {
+        border: 5px solid red;
+      }
+
+      div.inteira {
+        width: 100vw;
+        border-color: green;
+      }
+
+      div.metade {
+        width: 50%;
+        border-color: blue;
+      }
+
+      .row {
+        width: 100%;
+      }
+
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      /*mobile first*/
+
+      .col {
+        width: 100%;
+        float: left;
+        min-height: 150px;
+      }
+      /*
+        breakpoints começam aqui
+     */
+      @media screen and (min-width: 600px) {
+        .col-1 {
+          width: 8.33%;
+        }
+        .col-2 {
+          width: 16.66%;
+        }
+        .col-3 {
+          width: 25%;
+        }
+        .col-4 {
+          width: 33.33%;
+        }
+        .col-5 {
+          width: 41.66%;
+        }
+        .col-6 {
+          width: 50%;
+        }
+        .col-7 {
+          width: 58.33%;
+        }
+        .col-8 {
+          width: 66.66%;
+        }
+        .col-9 {
+          width: 75%;
+        }
+        .col-10 {
+          width: 83.33%;
+        }
+        .col-11 {
+          width: 91.66%;
+        }
+        .col-12 {
+          width: 100%;
+        }
+      }
+
+      .h600 {
+        height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col col-12"></div>
+    </div>
+    <div class="row">
+      <div class="col col-3 h600"></div>
+      <div class="col col-9">
+        <div class="row">
+          <div class="col col-3"></div>
+          <div class="col col-3"></div>
+          <div class="col col-3"></div>
+          <div class="col col-3"></div>
+
+          <div class="col col-4"></div>
+          <div class="col col-4"></div>
+          <div class="col col-4"></div>
+          <div class="col col-2"></div>
+          <div class="col col-10"></div>
+          <div class="col col-12"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-12"></div>
+    </div>
+  </body>
+</html>

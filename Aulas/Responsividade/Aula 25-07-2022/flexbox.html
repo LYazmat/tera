@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsividade</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .main {
+            width: 100%;
+            min-height: 100vh;
+        }
+        
+        header,
+        footer {
+            padding: 2em;
+            background-color: darkgrey;
+            min-height: 20vh;
+        }
+        
+        .sidebar {
+            background-color: green;
+            min-height: 20vh;
+        }
+        
+        .main-content {
+            background-color: blue;
+        }
+        
+        .main,
+        .main-content {
+            display: flex;
+            /*
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex: auto;
+        */
+            flex: 1 1 auto;
+            flex-direction: column;
+        }
+        
+        .content-section {
+            display: flex;
+            flex: 1 1 auto;
+        }
+        
+        .sidebar-1 {
+            order: -1;
+        }
+        
+        @media (min-width: 600px) {
+            .main-content {
+                flex-direction: row;
+            }
+            .sidebar {
+                flex: 0 0 20vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <h1>Home da nossa page</h1>
+        </header>
+
+        <div class="main-content">
+            <div class="content-section"></div>
+
+            <!--<aside class="sidebar sidebar-1"></aside>-->
+            <aside class="sidebar sidebar-2"></aside>
+        </div>
+
+        <footer>
+            <h3>rodapé aqui</h3>
+        </footer>
+    </div>
+</body>
+
+</html>

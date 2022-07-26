@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsividade</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .main {
+            width: 100%;
+            min-height: 100vh;
+        }
+        
+        header,
+        footer {
+            padding: 2em;
+            background-color: darkgrey;
+        }
+        
+        .row {
+            width: 100%;
+            padding: 0.5em;
+        }
+        
+        [class*="col-"] {
+            width: 100%;
+            padding: 1em;
+        }
+        
+        .fakeimg,
+        .fakepost {
+            width: 100%;
+            background-color: gray;
+        }
+        
+        .h200 {
+            height: 200px;
+        }
+        
+        .h100 {
+            height: 100px;
+        }
+        
+        .fotolog {
+            border-radius: 50%;
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .fotolog>div {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .fakepost {
+            padding: 1em;
+            margin-bottom: 10px;
+        }
+        
+        .video {
+            background-color: black;
+            color: white;
+        }
+        
+        @media (min-width: 600px) {
+            [class*="col-"] {
+                float: left;
+            }
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .col-1 {
+                width: 8.33%;
+            }
+            .col-2 {
+                width: 16.66%;
+            }
+            .col-3 {
+                width: 25%;
+            }
+            .col-4 {
+                width: 33.33%;
+            }
+            .col-5 {
+                width: 41.66%;
+            }
+            .col-6 {
+                width: 50%;
+            }
+            .col-7 {
+                width: 58.33%;
+            }
+            .col-8 {
+                width: 66.66%;
+            }
+            .col-9 {
+                width: 75%;
+            }
+            .col-10 {
+                width: 83.33%;
+            }
+            .col-11 {
+                width: 91.66%;
+            }
+            .col-12 {
+                width: 100%;
+            }
+        }
+        
+        .imgprint {
+            display: none;
+        }
+        
+        @media print {
+            .imgprint {
+                display: block;
+                background-color: red;
+            }
+            .video {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <h1>Nome do blog aqui</h1>
+        </header>
+
+        <div class="main-content">
+            <div class="row">
+                <div class="col-9">
+                    <div class="row">
+                        <div class="col-4">
+                            <h2>T&iacute;tulo do Post</h2>
+                            <h5>Descri&ccedil;&atilde;o do post, Mar&ccedil;o 30, 2022</h5>
+                            <div class="fakeimg h200">
+                                imagem do blog ( eu sei poderia ser um img/figure )
+                            </div>
+                            <p>Mussum Ipsum, cacilds vidis litro abertis.</p>
+                            <p>
+                                Manduma pindureta quium dia nois paga.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <h2>T&iacute;tulo do Post</h2>
+                            <h5>Descri&ccedil;&atilde;o do post, Mar&ccedil;o 30, 2022</h5>
+                            <div class="fakeimg h200">
+                                imagem do blog ( eu sei poderia ser um img/figure )
+                            </div>
+                            <p>Mussum Ipsum, cacilds vidis litro abertis.</p>
+                            <p>
+                                Manduma pindureta quium dia nois paga.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <h2>T&iacute;tulo do Post</h2>
+                            <h5>Descri&ccedil;&atilde;o do post, Mar&ccedil;o 30, 2022</h5>
+                            <div class="fakeimg h200">
+                                imagem do blog ( eu sei poderia ser um img/figure )
+                            </div>
+                            <p>Mussum Ipsum, cacilds vidis litro abertis.</p>
+                            <p>
+                                Manduma pindureta quium dia nois paga.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>T&iacute;tulo do Post</h2>
+                            <h5>Descri&ccedil;&atilde;o do post, Mar&ccedil;o 30, 2022</h5>
+                            <div class="fakeimg h200 video">
+                                v&iacute;deo do blog ( eu sei poderia ser um video->source )
+                            </div>
+                            <div class="fakeimg h200 imgprint">
+                                imagem do blog ( eu sei poderia ser um img/figure )
+                            </div>
+                            <p>Mussum Ipsum, cacilds vidis litro abertis.</p>
+                            <p>
+                                Manduma pindureta quium dia nois paga.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <h2>T&iacute;tulo do Post</h2>
+                            <h5>Descri&ccedil;&atilde;o do post, Mar&ccedil;o 30, 2022</h5>
+                            <div class="fakeimg h200 video">
+                                v&iacute;deo do blog ( eu sei poderia ser um video->source )
+                            </div>
+                            <div class="fakeimg h200 imgprint">
+                                imagem do blog ( eu sei poderia ser um img/figure )
+                            </div>
+                            <p>Mussum Ipsum, cacilds vidis litro abertis.</p>
+                            <p>
+                                Manduma pindureta quium dia nois paga.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>T&iacute;tulo do Post</h2>
+                            <h5>Descri&ccedil;&atilde;o do post, Mar&ccedil;o 30, 2022</h5>
+                            <div class="fakeimg h200">
+                                imagem do blog ( eu sei poderia ser um img/figure )
+                            </div>
+                            <p>Mussum Ipsum, cacilds vidis litro abertis.</p>
+                            <p>
+                                Manduma pindureta quium dia nois paga.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Sobre mim</h2>
+                            <div class="fakeimg h200 fotolog">
+                                <div>Minha foto</div>
+                            </div>
+                            <p>
+                                Mussum Ipsum, cacilds vidis litro abertis. <br />Manduma pindureta quium dia nois paga.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>&Uacute;ltimas postagens</h3>
+                            <div class="fakepost">img fake do blog</div>
+                            <div class="fakepost">img fake do blog</div>
+                            <div class="fakepost">img fake do blog</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h3>rodapé aqui</h3>
+        </footer>
+    </div>
+</body>
+
+</html>
