@@ -43,6 +43,7 @@ function mostraImagemDaNasa() {
 
 function mostraImagemDaNasa() {
     if (start.value && end.value) {
+        document.body.style.cursor = "wait";
         fetch(
                 `https://api.nasa.gov/planetary/apod?api_key=521rEK1dghO2zF4gOTNi7dvo6P7EKvqCEahBUv03&start_date=${start.value}&end_date=${end.value}`
             )
@@ -52,15 +53,22 @@ function mostraImagemDaNasa() {
 
                 lista.innerHTML = "";
                 dados.forEach(element => {
+                    let media = ""
+                    if (element.media_type === 'video') {
+                        media = `<iframe class="w-100" height="400" src="${element.url}"></iframe>`
+                    } else if (element.media_type === 'image') {
+                        media = `<img class="w-100 mt-2" src="${element.url}" title="${element.title}"/>`
+                    }
                     lista.innerHTML += `
-                    <div class="col-sm-6 p-3">
-                        <div class="p-3 border border-muted rounded-3 h-100">
-                            <p class="fs-2">${element.title} (${element.date})</p>
-                            <p class="fs-6">${element.explanation}</p>
-                            <img class="w-100 mt-5" src="${element.url}" title="${element.title}"/>
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 p-3">
+                        <div class="p-3 border border-muted border-3 rounded-3 h-100">
+                            <p class="fs-3">${element.title} (${element.date})</p>
+                            <p class="small">${element.explanation}</p>
+                            ${media}
                         </div>
                     </div>`;
                 });
+                document.body.style.cursor = "auto";
             });
     }
 }
