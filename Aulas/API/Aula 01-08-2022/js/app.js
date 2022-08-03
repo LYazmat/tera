@@ -41,11 +41,6 @@ function carregaCep(cep) {
 }
 
 function listarUsuarios() {
-    /*
-    
-    <p>O nome do usuário é <strong>Nome</strong> foto: <img src="" /></p>
-  
-    */
 
     fetch("https://reqres.in/api/users")
         .then((resp) => resp.json())
@@ -60,17 +55,6 @@ function listarUsuarios() {
                 ).innerHTML += `<p>O nome do usuário é <strong>${usuario.first_name}</strong> foto: <img src="${usuario.avatar}" /></p>`;
             });
         });
-
-    /*
-    let contador = 0;
-    let i = 0;
-    for (i; i < 10; i++) {
-      contador += 1999;
-    }
-  
-    console.log({ i });
-    console.log({ contador });
-  */
 }
 
 function dadosDoUsuario(id_usuario) {

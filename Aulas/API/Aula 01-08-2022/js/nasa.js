@@ -1,45 +1,34 @@
 // https://api.nasa.gov/planetary/apod?api_key=521rEK1dghO2zF4gOTNi7dvo6P7EKvqCEahBUv03
 // 521rEK1dghO2zF4gOTNi7dvo6P7EKvqCEahBUv03
 
-function twoDigits(numero) {
+// Função para adicionar 1 (um) zero se número for menor que 9
+const twoDigits = (numero) => {
     return numero <= 9 ? '0' + numero : numero;
 }
 
-function convertDate(date) {
+// Função que pega um objeto Date e transforma numa string YYYY-mm-dd
+const convertDate = (date) => {
     return `${hoje.getFullYear()}-${twoDigits(hoje.getMonth())}-${twoDigits(hoje.getDay())}`
+}
+
+// Função que converte string YYYY-mm-dd em string dd/mm/YYYY
+const convertDateBr = (date) => {
+    let date_br = date.split('-')
+    return [date_br[2], date_br[1], date_br[0]].join('/')
 }
 
 var start = document.getElementById("inicio");
 var end = document.getElementById("fim");
 const lista = document.querySelector(".lista-imagem")
-var hoje = new Date();
 
+// Setar a data máxima dos inputs para o dia de hoje
+var hoje = new Date();
 start.setAttribute('max', convertDate(hoje))
 end.setAttribute('max', convertDate(hoje))
 
-/*
-function mostraImagemDaNasa() {
-    if (start.value && end.value) {
-        console.log(start.value)
-        console.log(end.value)
-        fetch(
-                `https://api.nasa.gov/planetary/apod?api_key=521rEK1dghO2zF4gOTNi7dvo6P7EKvqCEahBUv03&date=${start.value}`
-            )
-            .then((resp) => resp.json())
-            .then((dados) => {
-                console.log({ dados });
-                document.querySelector(
-                    ".lista-imagem"
-                ).innerHTML = `
-                <div class="col-sm-6">
-                    <p class="fs-1">${dados.title} (${dados.date})</p>
-                    <p class="fs-6">${dados.explanation}</p>
-                    <img class="w-100" src="${dados.url}" title="${dados.title}"/>
-                </div>`;
-            });
-    }
-}
-*/
+// Setar valores iniciais para data de hoje
+start.setAttribute('value', convertDate(hoje))
+end.setAttribute('value', convertDate(hoje))
 
 function mostraImagemDaNasa() {
     if (start.value && end.value) {
@@ -62,7 +51,8 @@ function mostraImagemDaNasa() {
                     lista.innerHTML += `
                     <div class="col-12 col-sm-6 col-md-4 col-xl-3 p-3">
                         <div class="p-3 border border-muted border-3 rounded-3 h-100">
-                            <p class="fs-3">${element.title} (${element.date})</p>
+                            <p class="fs-6 text-center bg-dark text-white p-1">${convertDateBr(element.date)}</p>
+                            <p class="fs-3">${element.title}</p>
                             <p class="small">${element.explanation}</p>
                             ${media}
                         </div>
