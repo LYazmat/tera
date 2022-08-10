@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+
+para fins ilustrativos e efeitos didáticos
+vamos adicionar borda no elementos
+
+
+* {
+    border: 5px solid red;
+}
+
+*/
+
+header {
+    background-color: purple;
+}
+
+main {
+    background-color: gold;
+}
+
+footer {
+    background-color: silver;
+}
+
+
+/*
+
+fim das coisas feias
+
+*/
+
+.container-fluid {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+.principal {
+    min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 740px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 740px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1268px;
+    }
+}
+
+.container,
+.container-fluid {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    /* flex: 1 1 auto; */
+    flex-direction: column;
+}
+
+header,
+main,
+footer {
+    display: flex;
+    flex: 1 1 auto;
+}
